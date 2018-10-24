@@ -1,0 +1,1 @@
+default_app_config = "photography.apps.PhotographyConfig"

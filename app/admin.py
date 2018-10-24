@@ -1,0 +1,38 @@
+from django.contrib import admin
+from .models import Config, version
+import jdatetime
+from django.utils.translation import ugettext_lazy as _
+from django.utils.html import format_html
+from django.conf import settings
+
+PREFIX = getattr(settings, "PREFIX", None)
+@admin.register(Config)
+class ConfigAdmin(admin.ModelAdmin):
+    list_display = ('id', 'title', 'status', 'createDateTime', 'owner', 'watermark')
+    list_display_links = ('title',)
+    ordering = ('id',)
+    list_filter = ('createDateTime',)
+    search_fields = ('title', 'content')
+
+@admin.register(version)
+class VersionAdmin(admin.ModelAdmin):
+    list_display = ('id', 'owner', 'status', 'ver', 'file_link', 'file_create')
+    list_display_links = ('id',)
+    list_editable = ('status',)
+    ordering = ('createDateTime', 'id')
+    list_filter = ('createDateTime',)
+    search_fields = ('content',)
+    def file_create(self, obj):
+        if obj.createDateTime:
+            return jdatetime.date.fromgregorian(date=obj.createDateTime)
+        else:
+            return "No attachment"
+    def file_link(self, obj):
+        if obj.url:
+            return format_html('<a href="%s%s" target="_blank">%s</a>' % (PREFIX, obj.url.url, PREFIX + obj.url.url))
+        else:
+            return "No attachment"
+
+    file_link.allow_tags = True
+    file_create.short_description = _('File Create')
+

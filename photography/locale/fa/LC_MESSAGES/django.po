@@ -1,0 +1,124 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-09-11 00:20+0430\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: photography/apps.py:7
+msgid "photography"
+msgstr "فتوگرافی"
+
+#: photography/models.py:11
+msgid "Draft"
+msgstr "پیش نویس"
+
+#: photography/models.py:12
+msgid "Published"
+msgstr "انتشاریافته"
+
+#: photography/models.py:17 photography/models.py:51 photography/models.py:82
+msgid "owner"
+msgstr "مالک"
+
+#: photography/models.py:18 photography/models.py:52 photography/models.py:83
+msgid "please choose owner post"
+msgstr "لطفا مالک کانفیک را انتخاب کنید"
+
+#: photography/models.py:23 photography/models.py:57 photography/models.py:88
+msgid "title"
+msgstr "عنوان"
+
+#: photography/models.py:24
+msgid "min_word"
+msgstr "کمترین کلمات"
+
+#: photography/models.py:25
+msgid "medium_word"
+msgstr "متوسط کلمات"
+
+#: photography/models.py:26
+msgid "max_word"
+msgstr "بیشترین کلمات"
+
+#: photography/models.py:27 photography/models.py:58 photography/models.py:96
+msgid "publish"
+msgstr "انتشار"
+
+#: photography/models.py:28 photography/models.py:59 photography/models.py:92
+msgid "extra files"
+msgstr "انتخاب فایل"
+
+#: photography/models.py:29 photography/models.py:60 photography/models.py:97
+#: photography/models.py:136
+msgid "create date"
+msgstr "تاریخ ایجاد"
+
+#: photography/models.py:30 photography/models.py:61 photography/models.py:98
+msgid "update date"
+msgstr "تاریخ بروز رسانی"
+
+#: photography/models.py:36 photography/models.py:45 photography/models.py:94
+msgid "photo_Mask"
+msgstr "عکس ماسک"
+
+#: photography/models.py:37
+msgid "photo_Masks"
+msgstr "عکسهای ماسک"
+
+#: photography/models.py:67 photography/models.py:68 photography/models.py:76
+#: photography/models.py:95
+msgid "photo_main"
+msgstr "عکس اصلی"
+
+#: photography/models.py:89
+msgid "count"
+msgstr ""
+
+#: photography/models.py:90
+msgid "order"
+msgstr "مرتب شده"
+
+#: photography/models.py:91
+msgid "status"
+msgstr "وضعیت"
+
+#: photography/models.py:93
+msgid "category"
+msgstr "دسته بندی"
+
+#: photography/models.py:112 photography/models.py:122
+#: photography/models.py:135
+msgid "photo"
+msgstr "عکس"
+
+#: photography/models.py:113
+msgid "photos"
+msgstr "عکسها"
+
+#: photography/models.py:128
+msgid "user"
+msgstr ""
+
+#: photography/models.py:130
+#, fuzzy
+#| msgid "please choose owner post"
+msgid "please choose owner Coin_price"
+msgstr "لطفا مالک کانفیک را انتخاب کنید"
+
+#: photography/models.py:140 photography/models.py:141
+msgid "Photo_log"
+msgstr ""

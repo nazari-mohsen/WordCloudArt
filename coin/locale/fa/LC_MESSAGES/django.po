@@ -1,0 +1,50 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-09-11 00:20+0430\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+#: coin/apps.py:7
+msgid "coin"
+msgstr ""
+
+#: coin/models.py:10 coin/models.py:27
+msgid "owner"
+msgstr ""
+
+#: coin/models.py:12
+msgid "please choose owner Coin_video"
+msgstr ""
+
+#: coin/models.py:17 coin/models.py:21 coin/models.py:22
+msgid "Coin_video"
+msgstr ""
+
+#: coin/models.py:18 coin/models.py:35
+msgid "create date"
+msgstr ""
+
+#: coin/models.py:29
+msgid "please choose owner Coin_price"
+msgstr ""
+
+#: coin/models.py:34
+msgid "coin_price"
+msgstr ""
+
+#: coin/models.py:38 coin/models.py:39
+msgid "Coin_price"
+msgstr ""

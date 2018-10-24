@@ -1,0 +1,16 @@
+yum -y install https://centos7.iuscommunity.org/ius-release.rpm
+yum -y install python36u python36u-devel python36u-pip python36u-wheel python36u-tkinter
+#yum install tkinter
+yum install epel-release
+yum install mariadb-server mariadb-server mysql-devel gcc redis
+
+
+
+[nginx]
+name=nginx repo
+baseurl=http://nginx.org/packages/mainline/centos/7/$basearch/
+gpgcheck=0
+enabled=1
+
+
+CREATE DATABASE cloud3 CHARACTER SET utf8 COLLATE utf8_persian_ci;

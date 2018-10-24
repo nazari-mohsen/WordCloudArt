@@ -1,0 +1,97 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-09-11 00:20+0430\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: app/admin.py:37
+msgid "File Create"
+msgstr ""
+
+#: app/apps.py:6
+msgid "application"
+msgstr "اپلیکیشن"
+
+#: app/models.py:8
+msgid "Draft"
+msgstr "پیش نویس"
+
+#: app/models.py:9
+msgid "Published"
+msgstr "انتشاریافته"
+
+#: app/models.py:14 app/models.py:37
+msgid "owner"
+msgstr "مالک"
+
+#: app/models.py:15 app/models.py:38
+#, fuzzy
+#| msgid "please choose owner config"
+msgid "please choose owner post"
+msgstr "لطفا مالک کانفیک را انتخاب کنید"
+
+#: app/models.py:19
+msgid "title"
+msgstr "عنوان"
+
+#: app/models.py:20 app/models.py:45
+msgid "status"
+msgstr "وضعیت"
+
+#: app/models.py:21 app/models.py:44
+msgid "content"
+msgstr "متن"
+
+#: app/models.py:22
+msgid "url_pre"
+msgstr "پسوند آدرس"
+
+#: app/models.py:23
+msgid "watermark"
+msgstr ""
+
+#: app/models.py:24
+msgid "save_place"
+msgstr "مکان ذخیره"
+
+#: app/models.py:25 app/models.py:48
+msgid "create date"
+msgstr "تاریخ ایجاد"
+
+#: app/models.py:26
+msgid "update date"
+msgstr "تاریخ بروز رسانی"
+
+#: app/models.py:32 app/models.py:33
+msgid "Config"
+msgstr "کانفیگ"
+
+#: app/models.py:46
+msgid "file"
+msgstr ""
+
+#: app/models.py:47
+msgid "ver_number"
+msgstr ""
+
+#: app/models.py:55
+msgid "version"
+msgstr ""
+
+#: app/models.py:56
+msgid "versions"
+msgstr ""
