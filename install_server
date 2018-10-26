@@ -14,3 +14,4 @@ enabled=1
 
 
 CREATE DATABASE cloud3 CHARACTER SET utf8 COLLATE utf8_persian_ci;
+CREATE DATABASE new_cloud CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
