@@ -25,6 +25,7 @@ from app.models import version
 from account.models import Profile
 from django.utils.crypto import get_random_string
 from coin.models import Coin_price
+import uuid
 
 cash_coin_video = 15
 cash_coin = 100
@@ -55,7 +56,6 @@ class categoryListAPIView(generics.ListAPIView):
 
 class photoListAPIView(generics.ListAPIView):
     serializer_class = PhotoListSerializer
-
     filter_backends = (DjangoFilterBackend,)
     filter_fields = ('category',)
     def get_queryset(self):
@@ -75,7 +75,6 @@ class CkeckVersionAPIView(APIView):
 class KeyAPIView(APIView):
     def get(self, request):
         print(request.user)
-        # Key_bazar = "mohsen"
         payload = get_random_string(length=15)
         cache.set(request.user, payload, timeout=86400)
         key = {"key": Key_bazar, "pl": payload}
@@ -169,7 +168,8 @@ class CashCoinAPIView(APIView):
 
 @api_view(['POST'])
 def PhotoAPIView(request):
-    # print(request.data)
+    print(request.data)
+    print(request.user)
     usern = str(request.user)
     request_photo(usern, request.data)
     user = User.objects.filter(username=request.user).first()
@@ -215,8 +215,9 @@ def CreateUserAPIView(request):
     if serializer.is_valid():
         # pprint(serializer)
         print(datetime.now().second)
-        now = str(datetime.now().second)
-        username = 'user' + now + get_random_string(length=10)
+        # now = str(datetime.now().second)
+        # username = 'user' + now + get_random_string(length=10)
+        username = uuid.uuid4()
         # pprint(username)
         password = User.objects.make_random_password()
         android_id = serializer.data.get('ad')

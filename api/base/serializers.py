@@ -13,17 +13,17 @@ class CategoryListSerializer(ModelSerializer):
 class PhotoListSerializer(ModelSerializer):
     class Meta:
         model = thumbnail
-        fields = ('id', 'cash', 'url')
+        fields = ('id', 'cash', 'count', 'url')
 
 
 class PhotoSerializer(serializers.Serializer):
     id = serializers.IntegerField(required=False, allow_null=False)
-    content = serializers.CharField(required=False, allow_blank=False, allow_null=False, max_length=100)
-    word1 = serializers.CharField(required=False, allow_blank=False, max_length=20)
+    content = serializers.CharField(required=False, allow_blank=False, allow_null=False, max_length=150)
+    word1 = serializers.CharField(required=False, allow_blank=False, max_length=50)
     word2 = serializers.CharField(required=False, allow_blank=False, max_length=20)
     color1 = serializers.CharField(required=False, allow_blank=False, max_length=10, default='deepskyblue')
     color2 = serializers.CharField(required=False, allow_blank=False, max_length=10, default='crimson')
-    main_color = serializers.CharField(required=False, allow_blank=False, max_length=10, default='gray')
+    main_color = serializers.CharField(required=False, allow_blank=False, max_length=10, default='default')
     bg_color = serializers.CharField(required=False, allow_blank=False, max_length=10, default='white')
 
 class CreateUserSerializer(ModelSerializer):
