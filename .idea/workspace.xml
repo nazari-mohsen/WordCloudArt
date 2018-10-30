@@ -2,10 +2,75 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="80bb9890-d4c1-4107-9789-c8a3fabd3dc3" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ap/create_photo.py" beforeDir="false" afterPath="$PROJECT_DIR$/ap/create_photo.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/base/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/base/serializers.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/base/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/base/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/cloud/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/category/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/category/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/photography/category/animal.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/photography/category/bastani.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/photography/category/girldockter.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/result/008311.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/result/024435.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/result/050331.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/result/071162.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/result/101532.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/result/11B3xNTOMYy1165641.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/result/11IdaLRSrhyX103481.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/result/121811.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/result/13Bf9egoMvYh338335.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/result/13IRFZzyg4k6430333.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/result/153540.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/result/159U7KCaER2a488378.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/result/16Q1BqjC9NiS144430.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/result/16TEk34aPkq5801545.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/result/16vNna0uE7mX459660.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/result/18dnH26xRYXh517595.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/result/193xWcaxsjcK804511.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/result/207RrJR0KczL224088.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/result/214522.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/result/217U6EiQRwBA893488.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/result/21WHFt8qnQsL306110.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/result/223NrlBbWSya515589.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/result/24BGCtdZCqWJ188314.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/result/250552.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/result/252228.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/result/257770.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/result/30SlJLNtzFwI814140.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/result/350438.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/result/3858NaUbYimo113384.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/result/39Rzemh0IQid041451.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/result/3OlMK1ZjtbM016839.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/result/3bh8wnMrMTG050104.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/result/43OKEYEAgRf4185511.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/result/44K2m3HxvNXk180102.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/result/44suxxSCIINa405138.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/result/473vDSHcfSE1378700.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/result/475255.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/result/49YQ2EvLXtpl380015.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/result/49j9aiQZkS5i335596.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/result/49qHf1LG4euq945797.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/result/50rLmNE2gfVB918344.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/result/517585.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/result/52VRP8T6Uddv553023.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/result/548518.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/result/54EIwCcZfhAZ358004.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/result/556162.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/result/560sMadwYbhv318584.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/result/56BCXl69GKb1104145.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/result/580hwqMfMTRM053313.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/result/585450.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/result/58AsmOVCd008435389.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/result/645420.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/result/813084.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/result/838811.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/result/851834.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/result/882210.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/result/888537.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/result/925908.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/result/933853.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/result/988854.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/version/photo_hNk5TD7.PNG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/photography/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/photography/models.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -21,68 +86,51 @@
           <entry key="project.open.time.21" value="1" />
           <entry key="project.open.time.23" value="1" />
           <entry key="project.open.time.30" value="1" />
+          <entry key="project.open.time.51" value="1" />
           <entry key="project.open.time.63" value="1" />
-          <entry key="project.opened" value="4" />
+          <entry key="project.opened" value="5" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="py" value="59" />
+          <entry key="py" value="71" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="Python" value="59" />
+          <entry key="Python" value="71" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="py" value="426" />
+          <entry key="py" value="452" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Python" value="426" />
+          <entry key="Python" value="452" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/api/base/serializers.py">
+        <entry file="file://$PROJECT_DIR$/photography/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="15" column="39" selection-start-line="15" selection-start-column="39" selection-end-line="15" selection-end-column="39" />
+            <state relative-caret-position="140">
+              <caret line="7" column="6" selection-start-line="7" selection-end-line="8" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/ap/create_photo.py">
+        <entry file="file://$PROJECT_DIR$/app/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="220">
-              <caret line="210" column="22" selection-start-line="210" selection-start-column="22" selection-end-line="210" selection-end-column="22" />
+            <state relative-caret-position="360">
+              <caret line="48" column="100" selection-start-line="48" selection-start-column="97" selection-end-line="48" selection-end-column="100" />
               <folding>
-                <element signature="e#123#132#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/api/base/views.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-520">
-              <caret line="56" column="45" selection-start-line="56" selection-start-column="45" selection-end-line="56" selection-end-column="45" />
-              <folding>
-                <element signature="e#2097#2506#0" />
-                <element signature="e#2558#2969#0" />
-                <element signature="e#3011#3146#0" />
-                <element signature="e#3179#3441#0" />
-                <element signature="e#3480#5194#0" />
-                <element signature="e#5232#7374#0" />
-                <element signature="e#9773#11581#0" />
+                <element signature="e#0#28#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -102,16 +150,19 @@
         <option value="$PROJECT_DIR$/log/tasks.py" />
         <option value="$PROJECT_DIR$/api/base/urls.py" />
         <option value="$PROJECT_DIR$/category/admin.py" />
-        <option value="$PROJECT_DIR$/category/models.py" />
         <option value="$PROJECT_DIR$/ap/tasks.py" />
         <option value="$PROJECT_DIR$/cloud/settings.py" />
         <option value="$PROJECT_DIR$/api/base/serializers.py" />
         <option value="$PROJECT_DIR$/api/base/views.py" />
         <option value="$PROJECT_DIR$/ap/create_photo.py" />
+        <option value="$PROJECT_DIR$/photography/admin.py" />
+        <option value="$PROJECT_DIR$/category/models.py" />
+        <option value="$PROJECT_DIR$/photography/models.py" />
+        <option value="$PROJECT_DIR$/app/models.py" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="640" />
     <option name="y" value="28" />
     <option name="width" value="630" />
@@ -129,27 +180,6 @@
             <path>
               <item name="new_wordcloud" type="b2602c69:ProjectViewProjectNode" />
               <item name="new_wordcloud" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="new_wordcloud" type="b2602c69:ProjectViewProjectNode" />
-              <item name="new_wordcloud" type="462c0819:PsiDirectoryNode" />
-              <item name="ap" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="new_wordcloud" type="b2602c69:ProjectViewProjectNode" />
-              <item name="new_wordcloud" type="462c0819:PsiDirectoryNode" />
-              <item name="api" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="new_wordcloud" type="b2602c69:ProjectViewProjectNode" />
-              <item name="new_wordcloud" type="462c0819:PsiDirectoryNode" />
-              <item name="api" type="462c0819:PsiDirectoryNode" />
-              <item name="base" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="new_wordcloud" type="b2602c69:ProjectViewProjectNode" />
-              <item name="new_wordcloud" type="462c0819:PsiDirectoryNode" />
-              <item name="photography" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -187,7 +217,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="28" width="1920" height="1018" extended-state="6" />
+    <frame x="0" y="28" width="1920" height="1018" extended-state="7" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.114451475" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -200,7 +230,7 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="8" sideWeight="0.4994726" visible="true" weight="0.34931508" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="8" sideWeight="0.4994726" visible="true" weight="0.2614155" />
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.50052744" side_tool="true" weight="0.34931508" />
       <window_info anchor="bottom" id="Python Console" order="10" sideWeight="0.4994726" weight="0.32990867" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -233,13 +263,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/photography/admin.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="12" column="20" selection-start-line="12" selection-start-column="20" selection-end-line="12" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/venv/lib64/python3.6/site-packages/django/contrib/admin/options.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="521">
@@ -268,13 +291,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/category/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="381">
-          <caret line="32" column="54" selection-start-line="32" selection-start-column="54" selection-end-line="32" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/api/base/tasks.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-425">
@@ -286,9 +302,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-40">
           <caret line="3" selection-start-line="3" selection-end-line="3" />
-          <folding>
-            <element signature="e#0#28#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -296,9 +309,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
           <caret line="3" column="29" lean-forward="true" selection-start-line="3" selection-start-column="29" selection-end-line="3" selection-end-column="29" />
-          <folding>
-            <element signature="e#0#23#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -313,16 +323,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
           <caret line="9" column="79" lean-forward="true" selection-start-line="9" selection-start-column="72" selection-end-line="9" selection-end-column="82" />
-          <folding>
-            <element signature="e#0#11#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/photography/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="281">
-          <caret line="100" column="6" selection-start-line="100" selection-start-column="4" selection-end-line="100" selection-end-column="9" />
         </state>
       </provider>
     </entry>
@@ -330,15 +330,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-520">
           <caret line="56" column="45" selection-start-line="56" selection-start-column="45" selection-end-line="56" selection-end-column="45" />
-          <folding>
-            <element signature="e#2097#2506#0" />
-            <element signature="e#2558#2969#0" />
-            <element signature="e#3011#3146#0" />
-            <element signature="e#3179#3441#0" />
-            <element signature="e#3480#5194#0" />
-            <element signature="e#5232#7374#0" />
-            <element signature="e#9773#11581#0" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -349,12 +340,43 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/photography/admin.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="80">
+          <caret line="5" column="81" selection-start-line="5" selection-start-column="81" selection-end-line="5" selection-end-column="94" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/category/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="22" column="78" selection-start-line="22" selection-start-column="78" selection-end-line="22" selection-end-column="78" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/ap/create_photo.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="210" column="22" selection-start-line="210" selection-start-column="22" selection-end-line="210" selection-end-column="22" />
+        <state relative-caret-position="260">
+          <caret line="139" column="19" selection-start-line="139" selection-start-column="19" selection-end-line="139" selection-end-column="19" />
           <folding>
             <element signature="e#123#132#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/photography/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="140">
+          <caret line="7" column="6" selection-start-line="7" selection-end-line="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="48" column="100" selection-start-line="48" selection-start-column="97" selection-end-line="48" selection-end-column="100" />
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
           </folding>
         </state>
       </provider>

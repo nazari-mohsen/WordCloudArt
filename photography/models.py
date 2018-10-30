@@ -5,7 +5,7 @@ from django.conf import settings
 from django.utils import timezone
 from django.utils.translation import ugettext_lazy as _
 import jdatetime
-
+from django.core.validators import FileExtensionValidator
 
 STATUS_CHOICES = (
     ('0', _('Draft')),
@@ -25,7 +25,7 @@ class photo_Mask(models.Model):
     medium_word = models.PositiveIntegerField(_('medium_word'), default=100)
     max_word = models.PositiveIntegerField(_('max_word'), default=50)
     publish = models.DateTimeField(_('publish'), default=timezone.now)
-    url = models.FileField(_('extra files'), upload_to='photography/photo_Mask/', null=True, blank=True)
+    url = models.FileField(_('extra files'), upload_to='photography/photo_Mask/', validators=[FileExtensionValidator(['jpg'])])
     createDateTime = models.DateTimeField(_('create date'), auto_now=False, auto_now_add=True)
     updateDateTime = models.DateTimeField(_('update date'), auto_now=True, auto_now_add=False)
 
@@ -63,7 +63,7 @@ class photo_main(models.Model):
                               )
     title = models.CharField(max_length=70, verbose_name=_('title'))
     publish = models.DateTimeField(_('publish'), default=timezone.now)
-    url = models.FileField(_('extra files'), upload_to='photography/photo_main/', null=True, blank=True)
+    url = models.FileField(_('extra files'), upload_to='photography/photo_main/', validators=[FileExtensionValidator(['png'])])
     createDateTime = models.DateTimeField(_('create date'), auto_now=False, auto_now_add=True)
     updateDateTime = models.DateTimeField(_('update date'), auto_now=True, auto_now_add=False)
 
@@ -102,7 +102,7 @@ class thumbnail(models.Model):
     cash = models.IntegerField(_('cash'), default=50, unique=False)
     order = models.PositiveIntegerField(_('order'), default=1)
     status = models.CharField(_('status'), choices=STATUS_CHOICES, default='1', max_length=10)
-    url = models.FileField(_('extra files'), upload_to='photography/thumbnail/', null=True, blank=True)
+    url = models.FileField(_('extra files'), upload_to='photography/thumbnail/', validators=[FileExtensionValidator(['jpg'])])
     category = models.ForeignKey(Category, verbose_name=_('category'), on_delete=models.CASCADE, related_name="thumbnail_photo",)
     photo_Mask = models.ForeignKey(photo_Mask, verbose_name=_('photo_Mask'), on_delete=models.CASCADE, null=True)
     photo_main = models.ForeignKey(photo_main, verbose_name=_('photo_main'), on_delete=models.CASCADE, null=True)

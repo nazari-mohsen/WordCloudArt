@@ -20,7 +20,7 @@ class Category(models.Model):
     title = models.CharField(_('title'), max_length=250)
     order = models.PositiveIntegerField(_('order'), default=1)
     status = models.CharField(_('status'), choices=STATUS_CHOICES, default='1', max_length=2)
-    url = models.FileField(_('extra files'), upload_to='photography/category/', null=True, blank=True)
+    url = models.FileField(_('extra files'), upload_to='photography/category/')
     created_at = models.DateTimeField(_('created at'), auto_now_add=True)
     updated_at = models.DateTimeField(_('updated at'), auto_now=True)
 

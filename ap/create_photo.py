@@ -137,7 +137,7 @@ def create_photo(id, content, word1, word2, color1, color2, main_color, bg_color
 
     stop_words_reshape = get_display(arabic_reshaper.reshape(word_stop))
     STOPWORDS = set([x.strip() for x in stop_words_reshape.split('\n')])
-
+    print(path_mask)
     mask_ptoto = np.array(Image.open('media/' + path_mask))
     main_photo = Image.open('media/' + path_photo)
     text = get_display(arabic_reshaper.reshape(content))
