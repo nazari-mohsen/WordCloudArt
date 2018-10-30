@@ -2,7 +2,7 @@ from django.db import models
 from django.conf import settings
 from django.utils.translation import ugettext_lazy as _
 from django.core.validators import FileExtensionValidator
-
+from django.utils.html import format_html
 
 
 STATUS_CHOICES = (
@@ -16,6 +16,7 @@ class Config(models.Model):
                               help_text=_('please choose owner post'),
                               blank=True,
                               null=True,
+                              on_delete=models.CASCADE,
                               default=1
                               )
     title = models.CharField(max_length=70, verbose_name=_('title'), null=True)
@@ -33,6 +34,9 @@ class Config(models.Model):
     class Meta:
         verbose_name = _('Config')
         verbose_name_plural = _('Config')
+
+    def image_tag(self):
+        return format_html(u'<img src="%s" width="50" height="50"/>' % (self.watermark.url))
 
 class version(models.Model):
     owner = models.ForeignKey(settings.AUTH_USER_MODEL,

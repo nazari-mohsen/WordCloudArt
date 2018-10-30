@@ -6,6 +6,7 @@ from django.utils import timezone
 from django.utils.translation import ugettext_lazy as _
 import jdatetime
 from django.core.validators import FileExtensionValidator
+from django.utils.html import format_html
 
 STATUS_CHOICES = (
     ('0', _('Draft')),
@@ -47,7 +48,7 @@ class photo_Mask(models.Model):
         return reverse('images:detail', kwargs={'id': self.id})
 
     def image_tag(self):
-        return u'<img src="%s" width="50" height="50"/>' % (self.url.url)
+        return format_html(u'<img src="%s" width="50" height="50"/>' % (self.url.url))
 
     image_tag.short_description = _('photo_Mask')
     image_tag.allow_tags = True
@@ -82,7 +83,7 @@ class photo_main(models.Model):
         return reverse('images:detail', kwargs={'id': self.id})
 
     def image_tag(self):
-        return u'<img src="%s" width="50" height="50"/>' % (self.url.url)
+        return format_html(u'<img src="%s" width="50" height="50"/>' % (self.url.url))
 
     image_tag.short_description = _('photo_main')
     image_tag.allow_tags = True
@@ -136,7 +137,7 @@ class thumbnail(models.Model):
         return reverse('images:detail', kwargs={'id': self.id})
 
     def image_tag(self):
-        return u'<img src="%s" width="50" height="50"/>' % (self.url.url)
+        return format_html(u'<img src="%s" width="50" height="50"/>' % (self.url.url))
 
     image_tag.short_description = _('thumbnail')
     image_tag.allow_tags = True

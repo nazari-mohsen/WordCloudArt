@@ -1,20 +1,20 @@
 from django.conf.urls import url
 from rest_framework_jwt.views import obtain_jwt_token, refresh_jwt_token, verify_jwt_token
 from . import views
-
+from django.urls import re_path
 urlpatterns = [
 
-    url(r'^photo/$', views.photoListAPIView.as_view(), name='photo-list'),
-    url(r'^category/$', views.categoryListAPIView.as_view(), name='category-list'),
-    url(r'^check/$', views.CkeckVersionAPIView.as_view(), name='ckeck-version'),
-    url(r'^bkey/$', views.KeyAPIView.as_view(), name='ckeck-version'),
-    url(r'^coin/$', views.CkeckCoinAPIView.as_view(), name='ckeck-coin'),
-    url(r'^cash/$', views.CashCoinAPIView.as_view(), name='cash-coin'),
-    url(r'^crphoto/$', views.PhotoAPIView, name='create_photo'),
+    re_path(r'^photo/$', views.photoListAPIView.as_view(), name='photo-list'),
+    re_path(r'^category/$', views.categoryListAPIView.as_view(), name='category-list'),
+    re_path(r'^check/$', views.CkeckVersionAPIView.as_view(), name='ckeck-version'),
+    re_path(r'^bkey/$', views.KeyAPIView.as_view(), name='ckeck-version'),
+    re_path(r'^coin/$', views.CkeckCoinAPIView.as_view(), name='ckeck-coin'),
+    re_path(r'^cash/$', views.CashCoinAPIView.as_view(), name='cash-coin'),
+    re_path(r'^crphoto/$', views.PhotoAPIView, name='create_photo'),
 
-    url(r'^user/create/$', views.CreateUserAPIView, name='create_user'),
-    url(r'^tokencreate/', obtain_jwt_token),
-    url(r'^token/refresh/', refresh_jwt_token),
-    url(r'^token/verify/', verify_jwt_token),
+    re_path(r'^user/create/$', views.CreateUserAPIView, name='create_user'),
+    re_path(r'^tokencreate/', obtain_jwt_token),
+    re_path(r'^token/refresh/', refresh_jwt_token),
+    re_path(r'^token/verify/', verify_jwt_token),
 
 ]

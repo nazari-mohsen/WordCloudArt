@@ -8,7 +8,7 @@ from django.conf import settings
 PREFIX = getattr(settings, "PREFIX", None)
 @admin.register(Config)
 class ConfigAdmin(admin.ModelAdmin):
-    list_display = ('id', 'title', 'status', 'createDateTime', 'owner', 'watermark')
+    list_display = ('id', 'title', 'status', 'createDateTime', 'owner', 'watermark', 'image_tag')
     list_display_links = ('title',)
     ordering = ('id',)
     list_filter = ('createDateTime',)

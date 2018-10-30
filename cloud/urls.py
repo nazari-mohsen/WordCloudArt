@@ -17,11 +17,11 @@ from django.conf.urls import url, include
 from django.contrib import admin
 from django.conf.urls.static import static
 from django.conf import settings
-
+from django.urls import re_path
 urlpatterns = [
-    url(r'^admin/', admin.site.urls),
-    url(r'^ckeditor/', include('ckeditor_uploader.urls')),
-    url(r'^api/v1/', include('api.base.urls', namespace='api-v1')),
+    re_path(r'^admin/', admin.site.urls),
+    re_path(r'^ckeditor/', include('ckeditor_uploader.urls')),
+    re_path(r'^api/v1/', include('api.base.urls')),
 
 ]
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

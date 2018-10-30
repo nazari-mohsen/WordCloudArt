@@ -3,6 +3,8 @@ from django.utils.translation import gettext_lazy as _
 from django.conf import settings
 from django.contrib.auth import get_user_model
 from django.contrib.auth.models import User
+from django.utils.html import format_html
+
 STATUS_CHOICES = (
     ('0', _('De-Active')),
     ('1', _('Active'))
@@ -35,3 +37,6 @@ class Category(models.Model):
         ]
         verbose_name = _('Category')
         verbose_name_plural = _('Categorys')
+
+    def image_tag(self):
+        return format_html(u'<img src="%s" width="50" height="50"/>' % (self.url.url))

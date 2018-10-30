@@ -33,7 +33,7 @@ class Photo_main(admin.ModelAdmin):
     list_display_links = ('id',)
     ordering = ('id',)
     list_filter = ('createDateTime',)
-    search_fields = ('title', 'content')
+    search_fields = ('title',)
     readonly_fields = ('image_tag',)
     list_per_page = 50
 
