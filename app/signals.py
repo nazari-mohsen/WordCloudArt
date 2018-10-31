@@ -12,4 +12,4 @@ def invalidate_cache_Config(sender, instance, **kwargs):
 @receiver(post_save, sender=version, dispatch_uid="Write issued")
 @receiver(post_delete, sender=version, dispatch_uid="Write issued")
 def invalidate_cache_version(sender, instance, **kwargs):
-    cache.delete('Version')
+    cache.delete('version')

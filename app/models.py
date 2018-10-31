@@ -19,12 +19,12 @@ class Config(models.Model):
                               on_delete=models.CASCADE,
                               default=1
                               )
-    title = models.CharField(max_length=70, verbose_name=_('title'), null=True)
+    title = models.CharField(max_length=70, verbose_name=_('title'), unique=True)
     status = models.CharField(_('status'), choices=STATUS_CHOICES, default='0', max_length=4)
-    content = models.TextField(verbose_name=_('content'))
-    url_pre = models.CharField(max_length=70, verbose_name=_('url_pre'), null=True)
-    watermark = models.FileField(_('watermark'), upload_to='config/', validators=[FileExtensionValidator(['png'])])
-    save_place = models.CharField(max_length=70, verbose_name=_('save_place'), null=True)
+    content = models.TextField(verbose_name=_('content'), null=False)
+    url_pre = models.CharField(max_length=70, verbose_name=_('url_pre'), null=False)
+    watermark = models.FileField(_('watermark'), upload_to='config/', validators=[FileExtensionValidator(['png'])], null=False)
+    save_place = models.CharField(max_length=70, verbose_name=_('save_place'), null=False)
     createDateTime = models.DateTimeField(_('create date'), auto_now=False, auto_now_add=True)
     updateDateTime = models.DateTimeField(_('update date'), auto_now=True, auto_now_add=False)
 
@@ -50,8 +50,8 @@ class version(models.Model):
 
     content = models.TextField(verbose_name=_('content'))
     status = models.CharField(_('status'), choices=STATUS_CHOICES, default='0', max_length=4)
-    url = models.FileField(_('file'), upload_to='version/', validators=[FileExtensionValidator(['apk'])])
-    ver = models.IntegerField(verbose_name=_('ver_number'), null=True, default=None)
+    url = models.FileField(_('file'), upload_to='version/', validators=[FileExtensionValidator(['apk'])], null=False)
+    ver = models.IntegerField(verbose_name=_('ver_number'), null=False, default=None)
     createDateTime = models.DateTimeField(_('create date'), auto_now=False, auto_now_add=True)
 
 

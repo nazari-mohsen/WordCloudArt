@@ -2,143 +2,33 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="80bb9890-d4c1-4107-9789-c8a3fabd3dc3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/account/migrations/0006_auto_20181030_1513.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/photography/thumbnail/Rycycle.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/photography/thumbnail/khorshidabr.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/photography/thumbnail/loobia.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/photography/thumbnail/love.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/photography/thumbnail/mah.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/photography/thumbnail/mah2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/photography/thumbnail/mah_abr.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/photography/thumbnail/mah_girl.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/photography/thumbnail/mah_khorshid.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/photography/thumbnail/mahderakht.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/photography/thumbnail/mashin.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/photography/thumbnail/mikimose.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/photography/thumbnail/minion.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/photography/thumbnail/morgh.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/photography/thumbnail/music.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/photography/thumbnail/nik.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/photography/thumbnail/paa.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/photography/thumbnail/pangoan.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/photography/thumbnail/parvaneh.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/photography/thumbnail/philetak.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/photography/thumbnail/phonei.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/photography/thumbnail/pick.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/photography/thumbnail/pin-up-girl.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/photography/thumbnail/radepa.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/photography/thumbnail/sheni.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/photography/thumbnail/shokol.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/photography/thumbnail/shokolat.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/photography/thumbnail/sib.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/photography/thumbnail/sib2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/photography/thumbnail/star.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/photography/thumbnail/tabDOKHTAR.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/photography/thumbnail/tabDOKHTAR_bxxitiJ.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/photography/thumbnail/tabghafas.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/photography/thumbnail/tabpesardkhtar1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/photography/thumbnail/tabpesarmah.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/photography/thumbnail/taj.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/photography/thumbnail/telefono.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/photography/thumbnail/tootfarangi.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/photography/thumbnail/tree.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/photography/thumbnail/treeappel.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/photography/thumbnail/twodolfin.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/photography/thumbnail/zanbor.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/base/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/base/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/base/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/base/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/migrations/0011_auto_20181030_1327.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/app/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/category/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/category/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/signals.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/signals.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/category/apps.py" beforeDir="false" afterPath="$PROJECT_DIR$/category/apps.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/category/migrations/0007_auto_20181030_1314.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/category/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/category/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/cloud/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/mohsen/Rycycle.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/media/photography/photo_Mask/Rycycle.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/mohsen/Rycycle.png" beforeDir="false" afterPath="$PROJECT_DIR$/media/photography/photo_main/Rycycle.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/mohsen/khorshidabr.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/media/photography/photo_Mask/khorshidabr.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/mohsen/khorshidabr.png" beforeDir="false" afterPath="$PROJECT_DIR$/media/photography/photo_main/khorshidabr.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/mohsen/loobia.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/media/photography/photo_Mask/loobia.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/mohsen/loobia.png" beforeDir="false" afterPath="$PROJECT_DIR$/media/photography/photo_main/loobia.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/mohsen/love.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/media/photography/photo_Mask/love.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/mohsen/love.png" beforeDir="false" afterPath="$PROJECT_DIR$/media/photography/photo_main/love.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/mohsen/mah.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/media/photography/photo_Mask/mah.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/mohsen/mah2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/media/photography/photo_Mask/mah2.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/mohsen/mah2main.png" beforeDir="false" afterPath="$PROJECT_DIR$/media/photography/photo_main/mah2main.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/mohsen/mah_abr.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/media/photography/photo_Mask/mah_abr.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/mohsen/mah_abrmain.png" beforeDir="false" afterPath="$PROJECT_DIR$/media/photography/photo_main/mah_abrmain.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/mohsen/mah_girl.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/media/photography/photo_Mask/mah_girl.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/mohsen/mah_girlmain.png" beforeDir="false" afterPath="$PROJECT_DIR$/media/photography/photo_main/mah_girlmain.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/mohsen/mah_khorshid.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/media/photography/photo_Mask/mah_khorshid.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/mohsen/mah_khorshidmain.png" beforeDir="false" afterPath="$PROJECT_DIR$/media/photography/photo_main/mah_khorshidmain.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/mohsen/mahderakht.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/media/photography/photo_Mask/mahderakht.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/mohsen/mahderakht.png" beforeDir="false" afterPath="$PROJECT_DIR$/media/photography/photo_main/mahderakht.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/mohsen/mahmain.png" beforeDir="false" afterPath="$PROJECT_DIR$/media/photography/photo_main/mahmain.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/mohsen/mashin.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/media/photography/photo_Mask/mashin.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/mohsen/mashinmain.png" beforeDir="false" afterPath="$PROJECT_DIR$/media/photography/photo_main/mashinmain.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/mohsen/mikimose.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/media/photography/photo_Mask/mikimose.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/mohsen/mikimose.png" beforeDir="false" afterPath="$PROJECT_DIR$/media/photography/photo_main/mikimose.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/mohsen/minion.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/media/photography/photo_Mask/minion.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/mohsen/minion.png" beforeDir="false" afterPath="$PROJECT_DIR$/media/photography/photo_main/minion.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/mohsen/morgh.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/media/photography/photo_Mask/morgh.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/mohsen/morgh.png" beforeDir="false" afterPath="$PROJECT_DIR$/media/photography/photo_main/morgh.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/mohsen/music.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/media/photography/photo_Mask/music.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/mohsen/music.png" beforeDir="false" afterPath="$PROJECT_DIR$/media/photography/photo_main/music.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/mohsen/music2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/media/photography/photo_Mask/music2.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/mohsen/music2.png" beforeDir="false" afterPath="$PROJECT_DIR$/media/photography/photo_main/music2.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/mohsen/nik.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/media/photography/photo_Mask/nik.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/mohsen/nikmain.png" beforeDir="false" afterPath="$PROJECT_DIR$/media/photography/photo_main/nikmain.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/mohsen/paa.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/media/photography/photo_Mask/paa.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/mohsen/paamain.png" beforeDir="false" afterPath="$PROJECT_DIR$/media/photography/photo_main/paamain.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/mohsen/pangoan.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/media/photography/photo_Mask/pangoan.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/mohsen/pangoan.png" beforeDir="false" afterPath="$PROJECT_DIR$/media/photography/photo_main/pangoan.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/mohsen/parvaneh.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/media/photography/photo_Mask/parvaneh.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/mohsen/parvanehmain.png" beforeDir="false" afterPath="$PROJECT_DIR$/media/photography/photo_main/parvanehmain.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/mohsen/philetak.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/media/photography/photo_Mask/philetak.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/mohsen/philetak.png" beforeDir="false" afterPath="$PROJECT_DIR$/media/photography/photo_main/philetak.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/mohsen/phonei.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/media/photography/photo_Mask/phonei.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/mohsen/phonei.png" beforeDir="false" afterPath="$PROJECT_DIR$/media/photography/photo_main/phonei.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/mohsen/pick.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/media/photography/photo_Mask/pick.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/mohsen/pick.png" beforeDir="false" afterPath="$PROJECT_DIR$/media/photography/photo_main/pick.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/mohsen/pin-up-girl.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/media/photography/photo_Mask/pin-up-girl.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/mohsen/pin-up-girl.png" beforeDir="false" afterPath="$PROJECT_DIR$/media/photography/photo_main/pin-up-girl.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/mohsen/radepa.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/media/photography/photo_Mask/radepa.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/mohsen/radepa.png" beforeDir="false" afterPath="$PROJECT_DIR$/media/photography/photo_main/radepa.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/mohsen/sheni.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/media/photography/photo_Mask/sheni.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/mohsen/sheni.png" beforeDir="false" afterPath="$PROJECT_DIR$/media/photography/photo_main/sheni.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/mohsen/shokol.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/media/photography/photo_Mask/shokol.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/mohsen/shokol.png" beforeDir="false" afterPath="$PROJECT_DIR$/media/photography/photo_main/shokol.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/mohsen/shokolat.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/media/photography/photo_Mask/shokolat.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/mohsen/shokolatmain.png" beforeDir="false" afterPath="$PROJECT_DIR$/media/photography/photo_main/shokolatmain.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/mohsen/sib.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/media/photography/photo_Mask/sib.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/mohsen/sib2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/media/photography/photo_Mask/sib2.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/mohsen/sib2.png" beforeDir="false" afterPath="$PROJECT_DIR$/media/photography/photo_main/sib2.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/mohsen/sibmain.png" beforeDir="false" afterPath="$PROJECT_DIR$/media/photography/photo_main/sibmain.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/mohsen/star.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/media/photography/photo_Mask/star.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/mohsen/star.png" beforeDir="false" afterPath="$PROJECT_DIR$/media/photography/photo_main/star.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/mohsen/tabDOKHTAR.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/media/photography/photo_Mask/tabDOKHTAR.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/mohsen/tabDOKHTAR.png" beforeDir="false" afterPath="$PROJECT_DIR$/media/photography/photo_main/tabDOKHTAR.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/mohsen/tabghafas.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/media/photography/photo_Mask/tabghafas.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/mohsen/tabghafas.png" beforeDir="false" afterPath="$PROJECT_DIR$/media/photography/photo_main/tabghafas.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/mohsen/tabpesardkhtar.png" beforeDir="false" afterPath="$PROJECT_DIR$/media/photography/photo_main/tabpesardkhtar.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/mohsen/tabpesardkhtar1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/media/photography/photo_Mask/tabpesardkhtar1.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/mohsen/tabpesarmah.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/media/photography/photo_Mask/tabpesarmah.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/mohsen/tabpesarmah.png" beforeDir="false" afterPath="$PROJECT_DIR$/media/photography/photo_main/tabpesarmah.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/mohsen/taj.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/media/photography/photo_Mask/taj.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/mohsen/taj.png" beforeDir="false" afterPath="$PROJECT_DIR$/media/photography/photo_main/taj.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/mohsen/telefono.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/media/photography/photo_Mask/telefono.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/mohsen/telefonomain.png" beforeDir="false" afterPath="$PROJECT_DIR$/media/photography/photo_main/telefonomain.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/mohsen/tootfarangi.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/media/photography/photo_Mask/tootfarangi.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/mohsen/tootfarangi.png" beforeDir="false" afterPath="$PROJECT_DIR$/media/photography/photo_main/tootfarangi.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/mohsen/tree.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/media/photography/photo_Mask/tree.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/mohsen/treeappel.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/media/photography/photo_Mask/treeappel.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/mohsen/treeappelmain.png" beforeDir="false" afterPath="$PROJECT_DIR$/media/photography/photo_main/treeappelmain.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/mohsen/treemain.png" beforeDir="false" afterPath="$PROJECT_DIR$/media/photography/photo_main/treemain.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/mohsen/twodolfin.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/media/photography/photo_Mask/twodolfin.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/mohsen/twodolfin.png" beforeDir="false" afterPath="$PROJECT_DIR$/media/photography/photo_main/twodolfin.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/mohsen/zanbor.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/media/photography/photo_Mask/zanbor.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/mohsen/zanbormain.png" beforeDir="false" afterPath="$PROJECT_DIR$/media/photography/photo_main/zanbormain.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/photography/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/photography/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/photography/migrations/0002_photo_count.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/photography/migrations/0003_photo_log.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/photography/migrations/0004_auto_20180910_2226.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/photography/migrations/0005_auto_20180910_2227.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/photography/migrations/0006_auto_20180915_2308.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/photography/migrations/0007_photo_cash.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/photography/migrations/0008_auto_20181001_0031.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/photography/migrations/0009_auto_20181003_1122.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/photography/migrations/0010_auto_20181012_1729.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/photography/migrations/0011_auto_20181023_1833.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/photography/migrations/0012_auto_20181023_1844.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/photography/migrations/0013_auto_20181030_1308.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/photography/migrations/0014_auto_20181030_1308.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/photography/migrations/0015_auto_20181030_1311.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/photography/migrations/0016_auto_20181030_1312.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/photography/migrations/0017_auto_20181030_1322.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/photography/migrations/0018_auto_20181030_1324.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/photography/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/photography/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/photography/signals.py" beforeDir="false" afterPath="$PROJECT_DIR$/photography/signals.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -150,39 +40,77 @@
     <session id="842825440">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="2" />
+          <entry key="project.closed" value="3" />
           <entry key="project.open.time.21" value="1" />
           <entry key="project.open.time.23" value="1" />
+          <entry key="project.open.time.24" value="1" />
           <entry key="project.open.time.30" value="1" />
           <entry key="project.open.time.51" value="1" />
           <entry key="project.open.time.63" value="1" />
-          <entry key="project.opened" value="5" />
+          <entry key="project.opened" value="6" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="py" value="87" />
+          <entry key="py" value="114" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="Python" value="87" />
+          <entry key="Python" value="114" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="py" value="468" />
+          <entry key="py" value="559" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Python" value="468" />
+          <entry key="Python" value="559" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/category/signals.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="200">
+              <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
+              <folding>
+                <element signature="e#0#36#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/signals.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="280">
+              <caret line="14" column="27" lean-forward="true" selection-start-line="14" selection-start-column="27" selection-end-line="14" selection-end-column="27" />
+              <folding>
+                <element signature="e#0#36#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/category/apps.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="180">
+              <caret line="9" column="24" selection-start-line="9" selection-start-column="24" selection-end-line="9" selection-end-column="24" />
+              <folding>
+                <element signature="e#0#33#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -196,21 +124,26 @@
         <option value="$PROJECT_DIR$/log/tasks.py" />
         <option value="$PROJECT_DIR$/ap/tasks.py" />
         <option value="$PROJECT_DIR$/api/base/serializers.py" />
-        <option value="$PROJECT_DIR$/api/base/views.py" />
         <option value="$PROJECT_DIR$/ap/create_photo.py" />
         <option value="$PROJECT_DIR$/cloud/urls.py" />
         <option value="$PROJECT_DIR$/api/base/urls.py" />
-        <option value="$PROJECT_DIR$/cloud/settings.py" />
-        <option value="$PROJECT_DIR$/photography/models.py" />
-        <option value="$PROJECT_DIR$/category/models.py" />
         <option value="$PROJECT_DIR$/category/admin.py" />
         <option value="$PROJECT_DIR$/app/admin.py" />
-        <option value="$PROJECT_DIR$/app/models.py" />
         <option value="$PROJECT_DIR$/photography/admin.py" />
+        <option value="$PROJECT_DIR$/app/apps.py" />
+        <option value="$PROJECT_DIR$/photography/models.py" />
+        <option value="$PROJECT_DIR$/category/models.py" />
+        <option value="$PROJECT_DIR$/cloud/settings.py" />
+        <option value="$PROJECT_DIR$/api/base/views.py" />
+        <option value="$PROJECT_DIR$/photography/signals.py" />
+        <option value="$PROJECT_DIR$/app/models.py" />
+        <option value="$PROJECT_DIR$/app/signals.py" />
+        <option value="$PROJECT_DIR$/category/signals.py" />
+        <option value="$PROJECT_DIR$/category/apps.py" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="y" value="28" />
     <option name="width" value="960" />
     <option name="height" value="1018" />
@@ -221,6 +154,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -228,15 +162,50 @@
               <item name="new_wordcloud" type="b2602c69:ProjectViewProjectNode" />
               <item name="new_wordcloud" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="new_wordcloud" type="b2602c69:ProjectViewProjectNode" />
+              <item name="new_wordcloud" type="462c0819:PsiDirectoryNode" />
+              <item name="ap" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="new_wordcloud" type="b2602c69:ProjectViewProjectNode" />
+              <item name="new_wordcloud" type="462c0819:PsiDirectoryNode" />
+              <item name="api" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="new_wordcloud" type="b2602c69:ProjectViewProjectNode" />
+              <item name="new_wordcloud" type="462c0819:PsiDirectoryNode" />
+              <item name="api" type="462c0819:PsiDirectoryNode" />
+              <item name="base" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="new_wordcloud" type="b2602c69:ProjectViewProjectNode" />
+              <item name="new_wordcloud" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="new_wordcloud" type="b2602c69:ProjectViewProjectNode" />
+              <item name="new_wordcloud" type="462c0819:PsiDirectoryNode" />
+              <item name="category" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="new_wordcloud" type="b2602c69:ProjectViewProjectNode" />
+              <item name="new_wordcloud" type="462c0819:PsiDirectoryNode" />
+              <item name="photography" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../test_cloud" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/category" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -277,7 +246,7 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="8" sideWeight="0.4994726" visible="true" weight="0.9212329" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="8" sideWeight="0.4994726" visible="true" weight="0.33105022" />
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.50052744" side_tool="true" weight="0.34931508" />
       <window_info anchor="bottom" id="Python Console" order="10" sideWeight="0.4994726" weight="0.32990867" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -289,9 +258,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/__init__.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/ap/__init__.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -352,23 +318,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ap/create_photo.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="260">
-          <caret line="139" column="19" selection-start-line="139" selection-start-column="19" selection-end-line="139" selection-end-column="19" />
-          <folding>
-            <element signature="e#123#132#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/cloud/urls.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="360">
           <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
-          <folding>
-            <element signature="e#638#679#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -379,23 +332,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/api/base/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="199">
-          <caret line="56" column="45" selection-start-line="56" selection-start-column="45" selection-end-line="56" selection-end-column="45" />
-          <folding>
-            <element signature="e#2097#2506#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/api/base/urls.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="400">
           <caret line="20" selection-start-line="20" selection-end-line="20" />
-          <folding>
-            <element signature="e#0#32#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -410,40 +350,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="420">
           <caret line="21" column="39" lean-forward="true" selection-start-line="21" selection-start-column="39" selection-end-line="21" selection-end-column="39" />
-          <folding>
-            <element signature="e#0#32#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="400">
-          <caret line="35" column="41" lean-forward="true" selection-start-line="35" selection-start-column="41" selection-end-line="35" selection-end-column="41" />
-          <folding>
-            <element signature="e#0#28#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/category/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-80">
-          <caret line="5" column="3" selection-start-line="5" selection-end-line="5" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/photography/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-320">
-          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cloud/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="215">
-          <caret line="202" column="43" selection-start-line="202" selection-start-column="43" selection-end-line="202" selection-end-column="43" />
         </state>
       </provider>
     </entry>
@@ -451,6 +357,129 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="500">
           <caret line="35" column="29" selection-start-line="35" selection-start-column="29" selection-end-line="35" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/photography/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="560">
+          <caret line="28" column="126" selection-start-line="28" selection-start-column="126" selection-end-line="28" selection-end-column="126" />
+          <folding>
+            <element signature="e#0#31#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cloud/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="295">
+          <caret line="110" column="26" selection-start-line="110" selection-start-column="26" selection-end-line="110" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/category/__init__.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/category/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="128">
+          <caret line="13" column="10" selection-start-line="13" selection-start-column="6" selection-end-line="13" selection-end-column="14" />
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ap/create_photo.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="400">
+          <caret line="118" column="4" lean-forward="true" selection-start-line="118" selection-start-column="4" selection-end-line="118" selection-end-column="4" />
+          <folding>
+            <element signature="e#123#132#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/base/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-89">
+          <caret line="173" column="26" selection-start-line="173" selection-start-column="26" selection-end-line="173" selection-end-column="26" />
+          <folding>
+            <element signature="e#2097#2506#0" />
+            <element signature="e#2558#2968#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="440">
+          <caret line="52" column="100" selection-start-line="52" selection-start-column="100" selection-end-line="52" selection-end-column="100" />
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/photography/signals.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="440">
+          <caret line="22" column="39" lean-forward="true" selection-start-line="22" selection-start-column="39" selection-end-line="22" selection-end-column="39" />
+          <folding>
+            <element signature="e#0#36#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/category/signals.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
+          <folding>
+            <element signature="e#0#36#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/__init__.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/signals.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="280">
+          <caret line="14" column="27" lean-forward="true" selection-start-line="14" selection-start-column="27" selection-end-line="14" selection-end-column="27" />
+          <folding>
+            <element signature="e#0#36#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/apps.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="160">
+          <caret line="8" column="20" lean-forward="true" selection-start-line="7" selection-start-column="4" selection-end-line="8" selection-end-column="26" />
+          <folding>
+            <element signature="e#0#33#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/photography/apps.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#33#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/category/apps.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="9" column="24" selection-start-line="9" selection-start-column="24" selection-end-line="9" selection-end-column="24" />
+          <folding>
+            <element signature="e#0#33#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

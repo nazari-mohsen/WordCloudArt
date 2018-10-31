@@ -21,12 +21,12 @@ class photo_Mask(models.Model):
                               on_delete=models.CASCADE,
                               default=1
                               )
-    title = models.CharField(max_length=70, verbose_name=_('title'))
-    min_word = models.PositiveIntegerField(_('min_word'), default=200)
-    medium_word = models.PositiveIntegerField(_('medium_word'), default=100)
-    max_word = models.PositiveIntegerField(_('max_word'), default=50)
+    title = models.CharField(max_length=70, verbose_name=_('title'), unique=True, null=False)
+    min_word = models.PositiveIntegerField(_('min_word'), default=200, null=False)
+    medium_word = models.PositiveIntegerField(_('medium_word'), default=100, null=False)
+    max_word = models.PositiveIntegerField(_('max_word'), default=50, null=False)
     publish = models.DateTimeField(_('publish'), default=timezone.now)
-    url = models.FileField(_('extra files'), upload_to='photography/photo_Mask/', validators=[FileExtensionValidator(['jpg'])])
+    url = models.FileField(_('extra files'), upload_to='photography/photo_Mask/', validators=[FileExtensionValidator(['jpg'])], null=False)
     createDateTime = models.DateTimeField(_('create date'), auto_now=False, auto_now_add=True)
     updateDateTime = models.DateTimeField(_('update date'), auto_now=True, auto_now_add=False)
 
@@ -62,9 +62,9 @@ class photo_main(models.Model):
                               on_delete=models.CASCADE,
                               default=1
                               )
-    title = models.CharField(max_length=70, verbose_name=_('title'))
+    title = models.CharField(max_length=70, verbose_name=_('title'), unique=True, null=False)
     publish = models.DateTimeField(_('publish'), default=timezone.now)
-    url = models.FileField(_('extra files'), upload_to='photography/photo_main/', validators=[FileExtensionValidator(['png'])])
+    url = models.FileField(_('extra files'), upload_to='photography/photo_main/', validators=[FileExtensionValidator(['png'])], null=False)
     createDateTime = models.DateTimeField(_('create date'), auto_now=False, auto_now_add=True)
     updateDateTime = models.DateTimeField(_('update date'), auto_now=True, auto_now_add=False)
 
@@ -98,15 +98,15 @@ class thumbnail(models.Model):
                               on_delete=models.CASCADE,
                               default=1
                               )
-    title = models.CharField(max_length=70, verbose_name=_('title'))
-    count = models.IntegerField(verbose_name=_('count'), default=1)
-    cash = models.IntegerField(_('cash'), default=50, unique=False)
+    title = models.CharField(max_length=70, verbose_name=_('title'), unique=True, null=False)
+    count = models.IntegerField(verbose_name=_('count'), default=1, null=False)
+    cash = models.IntegerField(_('cash'), default=50, unique=False, null=False)
     order = models.PositiveIntegerField(_('order'), default=1)
     status = models.CharField(_('status'), choices=STATUS_CHOICES, default='1', max_length=10)
-    url = models.FileField(_('extra files'), upload_to='photography/thumbnail/', validators=[FileExtensionValidator(['jpg'])])
-    category = models.ForeignKey(Category, verbose_name=_('category'), on_delete=models.CASCADE, related_name="thumbnail_photo",)
-    photo_Mask = models.ForeignKey(photo_Mask, verbose_name=_('photo_Mask'), on_delete=models.CASCADE, null=True)
-    photo_main = models.ForeignKey(photo_main, verbose_name=_('photo_main'), on_delete=models.CASCADE, null=True)
+    url = models.FileField(_('extra files'), upload_to='photography/thumbnail/', validators=[FileExtensionValidator(['jpg'])], null=False)
+    category = models.ForeignKey(Category, verbose_name=_('category'), on_delete=models.CASCADE, related_name="thumbnail_photo", null=False)
+    photo_Mask = models.ForeignKey(photo_Mask, verbose_name=_('photo_Mask'), on_delete=models.CASCADE, null=False)
+    photo_main = models.ForeignKey(photo_main, verbose_name=_('photo_main'), on_delete=models.CASCADE, null=False)
     publish = models.DateTimeField(_('publish'), default=timezone.now)
     createDateTime = models.DateTimeField(_('create date'), auto_now=False, auto_now_add=True)
     updateDateTime = models.DateTimeField(_('update date'), auto_now=True, auto_now_add=False)
@@ -152,7 +152,7 @@ class Photo_log(models.Model):
                               on_delete=models.CASCADE,
                               null=True
                               )
-    Photo = models.ForeignKey(thumbnail, verbose_name=_('photo'), on_delete=models.CASCADE, null=True)
+    Photo = models.ForeignKey(thumbnail, verbose_name=_('photo'), on_delete=models.CASCADE, null=False)
     createDateTime = models.DateTimeField(_('create date'), auto_now=False, auto_now_add=True)
 
 

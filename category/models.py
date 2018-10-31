@@ -19,10 +19,10 @@ class Category(models.Model):
                               on_delete=models.CASCADE,
                               default=1
                               )
-    title = models.CharField(_('title'), max_length=250)
+    title = models.CharField(_('title'), max_length=250, unique=True)
     order = models.PositiveIntegerField(_('order'), default=1)
     status = models.CharField(_('status'), choices=STATUS_CHOICES, default='1', max_length=2)
-    url = models.FileField(_('extra files'), upload_to='photography/category/')
+    url = models.FileField(_('extra files'), upload_to='photography/category/', null=False)
     created_at = models.DateTimeField(_('created at'), auto_now_add=True)
     updated_at = models.DateTimeField(_('updated at'), auto_now=True)
 

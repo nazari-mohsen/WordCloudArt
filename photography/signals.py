@@ -8,6 +8,8 @@ from .models import thumbnail, photo_main, photo_Mask
 @receiver(post_delete, sender=thumbnail, dispatch_uid="Write issued")
 def invalidate_cache_photo(sender, instance, **kwargs):
     cache.delete('photo')
+    cache.delete_pattern('photo_conf*')
+    cache.delete_pattern('photo_main*')
 
 
 @receiver(post_save, sender=photo_main, dispatch_uid="Write issued")
