@@ -184,6 +184,8 @@ def PhotoAPIView(request):
             if serializer.is_valid():
                 id = serializer.data.get('id')
                 content = serializer.data.get('content')
+                colormap = serializer.data.get('cm')
+                font = serializer.data.get('f')
                 word1 = serializer.data.get('word1')
                 word2 = serializer.data.get('word2')
                 color1 = serializer.data.get('color1')
@@ -197,15 +199,13 @@ def PhotoAPIView(request):
                         photo_main = thumbnail.objects.filter(id=id, status=1).first()
                     if photo_main is not None and result.coin >= photo_main.cash:
                         cache.set(cache_key, photo_main, timeout=CACHE_TTL)
-                        url_image = create_photo(id, content, word1, word2, color1, color2, main_color, bg_color, usern)
+                        url_image = create_photo(id, content, colormap, font, word1, word2, color1, color2, main_color, bg_color, usern)
                         Photo_count.delay(datetime.now(), usern, id)
                         Profile.objects.filter(user=request.user).update(coin=F('coin') - photo_main.cash)
                         Update_Coin_Profile.delay(usern, int(photo_main.cash))
                         res = url_image
                         profile = Profile.objects.get(user=request.user)
-                        print(profile.coin)
                         res["coin"] = profile.coin
-                        print(res)
                         return Response(res, status=status.HTTP_200_OK)
                     else:
                         return Response({"ERROR": "User Not Enough Coin"}, status=status.HTTP_400_BAD_REQUEST)
@@ -216,13 +216,11 @@ def PhotoAPIView(request):
 @api_view(['POST'])
 @permission_classes((AllowAny, ))
 def CreateUserAPIView(request):
-    print(request.data)
     message = {"status": "Error"}
     createuser(request.data)
     serializer = CreateUserSerializer(data=request.data)
     if serializer.is_valid():
         # pprint(serializer)
-        print(datetime.now().second)
         # now = str(datetime.now().second)
         # username = 'user' + now + get_random_string(length=10)
         username = uuid.uuid4()
@@ -236,7 +234,6 @@ def CreateUserAPIView(request):
         imei = serializer.data.get('i')
         user = User.objects.filter(i=imei).first()
         if not user:
-            print(datetime.now())
             user = User.objects.create_user(username=username, ad=android_id, i=imei,
                                         password=password, Password_user=password,
                                             ar=android_ver, are=app_ver_code,
@@ -250,7 +247,6 @@ def CreateUserAPIView(request):
             profile.coin_video = cash_coin
             profile.save()
             Coin_video_save.delay(datetime.now(), str(request.user), cash_coin)
-            print(datetime.now())
             return Response({"ps": password, "ur": username})
         else:
             ps = user.Password_user

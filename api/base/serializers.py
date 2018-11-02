@@ -19,11 +19,13 @@ class PhotoListSerializer(ModelSerializer):
 class PhotoSerializer(serializers.Serializer):
     id = serializers.IntegerField(required=False, allow_null=False)
     content = serializers.CharField(required=False, allow_blank=False, allow_null=False, max_length=150)
+    cm = serializers.CharField(required=False, allow_blank=False, max_length=10, default='null')
+    f = serializers.CharField(required=False, allow_blank=False, max_length=10, default='a')
     word1 = serializers.CharField(required=False, allow_blank=False, max_length=50)
     word2 = serializers.CharField(required=False, allow_blank=False, max_length=20)
     color1 = serializers.CharField(required=False, allow_blank=False, max_length=10, default='deepskyblue')
     color2 = serializers.CharField(required=False, allow_blank=False, max_length=10, default='crimson')
-    main_color = serializers.CharField(required=False, allow_blank=False, max_length=10, default='default')
+    main_color = serializers.CharField(required=False, allow_blank=False, max_length=10, default='gray')
     bg_color = serializers.CharField(required=False, allow_blank=False, max_length=10, default='white')
 
 class CreateUserSerializer(ModelSerializer):

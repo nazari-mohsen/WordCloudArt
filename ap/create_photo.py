@@ -11,7 +11,7 @@ from PIL import Image
 import numpy as np
 from arabic_reshaper import arabic_reshaper
 from bidi.algorithm import get_display
-# from wordcloud import get_single_color_func
+from wordcloud import get_single_color_func
 from photography.models import thumbnail
 from app.models import Config
 import random
@@ -93,7 +93,7 @@ def name_generator(size=6, chars=string.digits):
 
 
 
-def create_photo(id, content, word1, word2, color1, color2, main_color, bg_color, user):
+def create_photo(id, content, colormap, font, word1, word2, color1, color2, main_color, bg_color, user):
 
     now = str(datetime.now().second)
     name = now + get_random_string(length=10) + name_generator(6, time.strftime("%s")) + '.jpeg'
@@ -137,7 +137,6 @@ def create_photo(id, content, word1, word2, color1, color2, main_color, bg_color
 
     stop_words_reshape = get_display(arabic_reshaper.reshape(word_stop))
     STOPWORDS = set([x.strip() for x in stop_words_reshape.split('\n')])
-    print(path_mask)
     mask_ptoto = np.array(Image.open('media/' + path_mask))
     main_photo = Image.open('media/' + path_photo)
     text = get_display(arabic_reshaper.reshape(content))
@@ -195,11 +194,26 @@ def create_photo(id, content, word1, word2, color1, color2, main_color, bg_color
     emoji = r"(?:[^\s])(?<![\w{ascii_printable}])".format(ascii_printable=string.printable)
     regexp = r"{normal_word}|{ascii_art}|{emoji}".format(normal_word=normal_word, ascii_art=ascii_art,
                                                          emoji=emoji)
-
-
+    # colormap = {1:"jet", 2:"hsv",3:"hot", 4:"cool", 5:"spring", 6:"summer", 7:"autumn", 8:"winter",
+    #             9:"gray",10:"copper", 11:"pink", 12:"lines"}
     # FONT_PATH = os.environ.get('FONT_PATH', os.path.join(FILE, 'DroidSansMono.ttf'))
     # Font_Path = ('media/config/font/IranNastaliq.ttf')
-    wc= PersianWordCloud(
+    Font_Path = {'a': 'Vazir-Light.ttf', 'b': 'AdobeArabic-Regular.otf', 'c': 'dara- latin-banaei-conect.ttf',
+                 'd': 'dara- latin-banaei.ttf', 'e': 'dara- latin.ttf', 'f': 'S_OUHOD.ttf', 'j': 'S_ALYERMOOK.ttf',
+                 'h': 'S_AMEEN.ttf', 'i': 'B_Nazanin_Regular.ttf', 'g': 'B_Nazanin_Black.ttf', 'k': 'B_Nazanin_Bold.ttf'
+                 , 'l': 'Mj_Anoosh.ttf', 'm': 'Mj_Pashtu_Outline.ttf', 'n': 'DastNevis.otf', 'o': 'AlexBrush-Regular.ttf'
+                 , 'p': 'ChopinScript.otf', 'q': 'B_Chini.ttf', 'r': 'B_Esfehan_Bold.ttf', 's': 'B_Fantezy.ttf',
+                 't': 'B_Kaj.ttf', 'u': 'B_Koodak_Outline.ttf', 'v': 'B_Majid_Shadow.ttf', 'w': 'B_Moj.ttf',
+                 'x': 'Mj_Nazila_Gol.ttf', 'z': 'BlackoakStd.otf', 'ab': 'BrushScriptStd.otf', 'ac': 'DirtyFox.ttf',
+                 'ad': 'mail_ray_stuff.ttf'}
+    Font = 'media/config/font/'+Font_Path[font]
+    print(colormap)
+    recolor = 'no'
+    if colormap == 'null':
+        colormap = 'cool'
+        recolor = 'yes'
+        print(colormap)
+    wc = PersianWordCloud(
         # font_path=Font_Path,
         max_words=400,
         stopwords=STOPWORDS,
@@ -207,14 +221,15 @@ def create_photo(id, content, word1, word2, color1, color2, main_color, bg_color
         width=700,
         height=700,
         min_font_size=4,
-        colormap="cool",
+        colormap=colormap,
+        font_path=Font,
         regexp=regexp,
         max_font_size=150,
         random_state=False,
         background_color=bg_color,
         mask=mask_ptoto
     ).generate_from_frequencies(words)
-    if not main_color == 'default':
+    if recolor == 'yes':
         grouped_color_func = SimpleGroupedColorFunc(color_to_words, main_color)
         wc.recolor(color_func=grouped_color_func)
     save_url = {}
