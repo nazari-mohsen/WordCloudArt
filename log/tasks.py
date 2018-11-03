@@ -1,5 +1,5 @@
 from celery import task
-from .models import Request_photo, CashCoin, Coinvideo, CreateUser
+from .models import Request_photo, CashCoin, Coinvideo, CreateUser, Crash
 from django.contrib.auth import get_user_model
 
 User = get_user_model()
@@ -43,3 +43,10 @@ def createuser(log):
     createuser.log = log
     # video_coin.createDateTime = time
     createuser.save()
+
+@task
+def crash(log, user):
+    crash = Crash()
+    crash.user = user
+    crash.log = log
+    crash.save()

@@ -143,19 +143,19 @@ class thumbnail(models.Model):
     image_tag.allow_tags = True
 
 
-class Photo_log(models.Model):
-    user = models.ForeignKey(settings.AUTH_USER_MODEL,
-                              verbose_name=_('user'),
-                              related_name='Photo_log',
-                              help_text=_('please choose owner Coin_price'),
-                              blank=True,
-                              on_delete=models.CASCADE,
-                              null=True
-                              )
-    Photo = models.ForeignKey(thumbnail, verbose_name=_('photo'), on_delete=models.CASCADE, null=False)
-    createDateTime = models.DateTimeField(_('create date'), auto_now=False, auto_now_add=True)
-
-
-    class Meta:
-        verbose_name = _('Photo_log')
-        verbose_name_plural = _('Photo_log')
+# class Photo_log(models.Model):
+#     user = models.ForeignKey(settings.AUTH_USER_MODEL,
+#                               verbose_name=_('user'),
+#                               related_name='Photo_log',
+#                               help_text=_('please choose owner Coin_price'),
+#                               blank=True,
+#                               on_delete=models.CASCADE,
+#                               null=True
+#                               )
+#     Photo = models.ForeignKey(thumbnail, verbose_name=_('photo'), on_delete=models.CASCADE, null=False)
+#     createDateTime = models.DateTimeField(_('create date'), auto_now=False, auto_now_add=True)
+#
+#
+#     class Meta:
+#         verbose_name = _('Photo_log')
+#         verbose_name_plural = _('Photo_log')

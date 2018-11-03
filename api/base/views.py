@@ -20,7 +20,7 @@ from rest_framework.views import APIView
 from django.db.models import F
 from datetime import datetime
 from .tasks import Coin_video_save, Photo_count, Coin_price_save, Update_Coin_Profile
-from log.tasks import request_photo, cashcoin, coinvideo, createuser
+from log.tasks import request_photo, cashcoin, coinvideo, createuser, crash
 from app.models import version
 from account.models import Profile
 from django.utils.crypto import get_random_string
@@ -141,7 +141,7 @@ class CashCoinAPIView(APIView):
             orderId = requs['purchase']['mOrderId']
             if Sku and PackageName and time and orderId:
                 if PackageName == packagename and Payload == developerpayload:
-                    choices = {'seke500': 500, 'seke1000': 1000, 'seke1500': 1500, 'seke2000': 2000}
+                    choices = {'seke1': 1000, 'seke2': 2000, 'seke3': 4000, 'seke4': 8000}
                     cash = choices.get(Sku)
                     profile = Profile.objects.filter(user=request.user).first()
                     if profile:
@@ -254,3 +254,11 @@ def CreateUserAPIView(request):
             return Response({"ps": ps, "ur": ur})
 
     return Response(message, status=status.HTTP_400_BAD_REQUEST)
+
+
+class Crash(APIView):
+    def post(self, request):
+        print(request.user)
+        print(request.data)
+        crash(request.data, str(request.user))
+        return Response(status=status.HTTP_200_OK)

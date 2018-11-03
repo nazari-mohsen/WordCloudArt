@@ -1,5 +1,6 @@
 from django.contrib import admin
-from .models import thumbnail, photo_main, photo_Mask, Photo_log
+from .models import thumbnail, photo_main, photo_Mask\
+    # , Photo_log
 
 @admin.register(thumbnail)
 class PhotoAdmin(admin.ModelAdmin):
@@ -38,11 +39,11 @@ class Photo_main(admin.ModelAdmin):
     list_per_page = 50
 
 
-@admin.register(Photo_log)
-class Admin_log(admin.ModelAdmin):
-    list_display = ('id', 'user', 'Photo', 'createDateTime')
-    list_display_links = ('id',)
-    ordering = ('id',)
-    list_filter = ('createDateTime', 'Photo')
-    search_fields = ('Photo', 'user')
-    list_per_page = 50
+# @admin.register(Photo_log)
+# class Admin_log(admin.ModelAdmin):
+#     list_display = ('id', 'user', 'Photo', 'createDateTime')
+#     list_display_links = ('id',)
+#     ordering = ('id',)
+#     list_filter = ('createDateTime', 'Photo')
+#     search_fields = ('Photo', 'user')
+#     list_per_page = 50
