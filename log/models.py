@@ -78,7 +78,7 @@ class CreateUser(models.Model):
         verbose_name_plural = _('CreateUser')
 
 class Crash(models.Model):
-    user = models.TextField(verbose_name=_('user'))
+    user = models.CharField(verbose_name=_('user'), max_length=256)
     log = models.TextField(verbose_name=_('Crash'))
     createDateTime = models.DateTimeField(_('create date'), auto_now=False, auto_now_add=True)
 

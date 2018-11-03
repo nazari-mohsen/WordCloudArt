@@ -10,7 +10,7 @@ urlpatterns = [
     re_path(r'^bkey/$', views.KeyAPIView.as_view(), name='ckeck-version'),
     re_path(r'^coin/$', views.CkeckCoinAPIView.as_view(), name='ckeck-coin'),
     re_path(r'^cash/$', views.CashCoinAPIView.as_view(), name='cash-coin'),
-    re_path(r'^crash/$', views.CashCoinAPIView.as_view(), name='crash'),
+    re_path(r'^crash/$', views.CrashAPIView.as_view(), name='crash'),
     re_path(r'^crphoto/$', views.PhotoAPIView, name='create_photo'),
 
     re_path(r'^user/create/$', views.CreateUserAPIView, name='create_user'),

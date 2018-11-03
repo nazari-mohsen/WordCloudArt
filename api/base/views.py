@@ -256,7 +256,7 @@ def CreateUserAPIView(request):
     return Response(message, status=status.HTTP_400_BAD_REQUEST)
 
 
-class Crash(APIView):
+class CrashAPIView(APIView):
     def post(self, request):
         print(request.user)
         print(request.data)
