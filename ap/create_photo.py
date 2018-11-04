@@ -22,6 +22,7 @@ from .tasks import photo_remove
 from django.conf import settings
 from django.core.cache import cache
 from django.utils.crypto import get_random_string
+from contextlib import suppress
 
 CACHE_TTL = getattr(settings, 'CACHE_TTL')
 COUNTDOWN = getattr(settings, 'COUNTDOWN')
@@ -197,16 +198,15 @@ def create_photo(id, content, colormap, font, word1, word2, color1, color2, main
     # colormap = {1:"jet", 2:"hsv",3:"hot", 4:"cool", 5:"spring", 6:"summer", 7:"autumn", 8:"winter",
     #             9:"gray",10:"copper", 11:"pink", 12:"lines"}
     # FONT_PATH = os.environ.get('FONT_PATH', os.path.join(FILE, 'DroidSansMono.ttf'))
-    # Font_Path = ('media/config/font/IranNastaliq.ttf')
-    Font_Path = {'a': 'Vazir-Light.ttf', 'b': 'AdobeArabic-Regular.otf', 'c': 'dara- latin-banaei-conect.ttf',
-                 'd': 'dara- latin-banaei.ttf', 'e': 'dara- latin.ttf', 'f': 'S_OUHOD.ttf', 'j': 'S_ALYERMOOK.ttf',
-                 'h': 'S_AMEEN.ttf', 'i': 'B_Nazanin_Regular.ttf', 'g': 'B_Nazanin_Black.ttf', 'k': 'B_Nazanin_Bold.ttf'
-                 , 'l': 'Mj_Anoosh.ttf', 'm': 'Mj_Pashtu_Outline.ttf', 'n': 'DastNevis.otf', 'o': 'AlexBrush-Regular.ttf'
-                 , 'p': 'ChopinScript.otf', 'q': 'B_Chini.ttf', 'r': 'B_Esfehan_Bold.ttf', 's': 'B_Fantezy.ttf',
-                 't': 'B_Kaj.ttf', 'u': 'B_Koodak_Outline.ttf', 'v': 'B_Majid_Shadow.ttf', 'w': 'B_Moj.ttf',
-                 'x': 'Mj_Nazila_Gol.ttf', 'z': 'BlackoakStd.otf', 'ab': 'BrushScriptStd.otf', 'ac': 'DirtyFox.ttf',
-                 'ad': 'mail_ray_stuff.ttf'}
-    Font = 'media/config/font/'+Font_Path[font]
+
+    Font_Path = {'a': 'B_Nazanin_Regular.ttf', 'b': 'Mj_Nazila_Gol.ttf', 'c': 'B_Fantezy.ttf',
+                 'd': 'B_Kaj.ttf', 'e': 'B_Moj.ttf', 'f': 'B_Majid_Shadow.ttf', 'j': 'B_Esfehan_Bold.ttf',
+                 'h': 'B_Koodak_Outline.ttf', 'i': 'Mj_Anoosh.ttf', 'g': 'B_Chini.ttf', 'k': 'Mj_Pashtu_Outline.ttf'
+                 , 'l': 'ChopinScript.otf', 'm': 'BrushScriptStd.otf', 'n': 'DirtyFox.ttf',
+                 'o': 'AlexBrush-Regular.ttf', 'p': 'BlackoakStd.otf'}
+
+    with suppress(FileNotFoundError):
+        Font = 'media/config/font/'+Font_Path[font]
     print(colormap)
     recolor = 'no'
     if colormap == 'null':
