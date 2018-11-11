@@ -91,10 +91,10 @@ class CkeckCoinAPIView(APIView):
         if user:
             result = Profile.objects.filter(user_id=user.id).first()
             if result:
-                coin = {"coin": result.coin}
+                coin = {"coin": result.coin, "cv": cash_coin_video}
                 return Response(coin)
             else:
-                return Response({"coin": "0"})
+                return Response({"coin": "0", "cv": cash_coin_video})
         else:
             return Response(message, status=status.HTTP_400_BAD_REQUEST)
 

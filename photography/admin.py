@@ -9,7 +9,7 @@ class PhotoAdmin(admin.ModelAdmin):
     list_display_links = ('id',)
     ordering = ('category', 'order', 'cash')
     list_filter = ('createDateTime', 'cash')
-    search_fields = ('title', 'photo_Mask', 'photo_main')
+    search_fields = ('title', )
     autocomplete_fields = ('photo_Mask', 'photo_main')
     readonly_fields = ('image_tag',)
     list_per_page = 50

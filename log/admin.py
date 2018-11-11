@@ -11,6 +11,7 @@ class request_photo(admin.ModelAdmin):
     list_filter = ('user',)
     search_fields = ('user', 'log')
     list_per_page = 20
+    readonly_fields = ('user', 'log')
 
 @admin.register(Photo_log)
 class Admin_log(admin.ModelAdmin):
@@ -29,6 +30,7 @@ class cashcoin(admin.ModelAdmin):
     list_filter = ('user',)
     search_fields = ('user', 'log')
     list_per_page = 20
+    readonly_fields = ('user', 'log')
 
 @admin.register(Coinvideo)
 class coinvideo(admin.ModelAdmin):
@@ -38,6 +40,7 @@ class coinvideo(admin.ModelAdmin):
     list_filter = ('user',)
     search_fields = ('user', 'log')
     list_per_page = 20
+    readonly_fields = ('user', 'log')
 
 @admin.register(CreateUser)
 class createuser(admin.ModelAdmin):
@@ -45,8 +48,9 @@ class createuser(admin.ModelAdmin):
     list_display_links = ('id', )
     ordering = ('id', )
     list_filter = ('id',)
-    search_fields = ('log', )
+    search_fields = ('log',)
     list_per_page = 20
+    readonly_fields = ('log',)
 
 @admin.register(Crash)
 class Crash(admin.ModelAdmin):
@@ -54,5 +58,6 @@ class Crash(admin.ModelAdmin):
     list_display_links = ('id', )
     ordering = ('id', )
     list_filter = ('id',)
-    search_fields = ('log', )
+    search_fields = ('log', 'user')
     list_per_page = 20
+    readonly_fields = ('user', 'log')
