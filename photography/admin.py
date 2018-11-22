@@ -4,8 +4,8 @@ from .models import thumbnail, photo_main, photo_Mask\
 
 @admin.register(thumbnail)
 class PhotoAdmin(admin.ModelAdmin):
-    list_display = ('id', 'title', 'cash', 'order', 'category', 'status', 'owner', 'image_tag')
-    list_editable = ('status', 'order', 'cash', 'category')
+    list_display = ('id', 'title', 'get_category', 'cash', 'order', 'status', 'owner', 'image_tag')
+    list_editable = ('status', 'order', 'cash')
     list_display_links = ('id',)
     ordering = ('category', 'order', 'cash')
     list_filter = ('createDateTime', 'cash')
@@ -14,6 +14,8 @@ class PhotoAdmin(admin.ModelAdmin):
     readonly_fields = ('image_tag',)
     list_per_page = 50
 
+    def get_category(self, obj):
+        return ",".join([p.title for p in obj.category.all()])
 
 @admin.register(photo_Mask)
 class Photo_Mask(admin.ModelAdmin):
