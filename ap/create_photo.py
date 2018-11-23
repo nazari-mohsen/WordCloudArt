@@ -134,9 +134,9 @@ def create_photo(id, content, colormap, font, word1, word2, color1, color2, main
     emoji = r"(?:[^\s])(?<![\w{ascii_printable}])".format(ascii_printable=string.printable)
     regexp = r"{normal_word}|{ascii_art}|{emoji}".format(normal_word=normal_word, ascii_art=ascii_art,
                                                          emoji=emoji)
-    Font_Path = {'a': 'B_Nazanin_Regular.ttf', 'b': 'Mj_Nazila_Gol.ttf', 'c': 'B_Fantezy.ttf',
+    Font_Path = {'a': 'B_Nazanin_Regular.ttf', 'b': 'Mj_Nazila_Gol.ttf', 'c': 'Mj_Farah_Medium.ttf',
                  'd': 'B_Kaj.ttf', 'e': 'B_Moj.ttf', 'f': 'B_Majid_Shadow.ttf', 'j': 'B_Esfehan_Bold.ttf',
-                 'h': 'B_Koodak_Outline.ttf', 'i': 'Mj_Anoosh.ttf', 'g': 'B_Chini.ttf', 'k': 'Mj_Pashtu_Outline.ttf'
+                 'h': 'B_Koodak_Outline.ttf', 'i': 'Mj_Fantezy.ttf', 'g': 'B_Chini.ttf', 'k': 'B_Fantezy.ttf'
                  , 'l': 'ChopinScript.otf', 'm': 'BrushScriptStd.otf', 'n': 'DirtyFox.ttf',
                  'o': 'AlexBrush-Regular.ttf', 'p': 'BlackoakStd.otf'}
 
