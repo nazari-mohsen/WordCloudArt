@@ -195,9 +195,9 @@ COUNTDOWN = 300
 
 
 REST_FRAMEWORK = {
-# 'DEFAULT_RENDERER_CLASSES': (
-#         'rest_framework.renderers.JSONRenderer',
-#     )
+'DEFAULT_RENDERER_CLASSES': (
+        'rest_framework.renderers.JSONRenderer',
+    ),
     'DEFAULT_PERMISSION_CLASSES': (
         'rest_framework.permissions.IsAuthenticated',
         # 'rest_framework.permissions.AllowAny',

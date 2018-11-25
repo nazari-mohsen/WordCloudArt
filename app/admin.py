@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Config, version
+from .models import Config, version, Help_App
 import jdatetime
 from django.utils.translation import ugettext_lazy as _
 from django.utils.html import format_html
@@ -36,3 +36,11 @@ class VersionAdmin(admin.ModelAdmin):
     file_link.allow_tags = True
     file_create.short_description = _('File Create')
 
+@admin.register(Help_App)
+class Help_AppAdmin(admin.ModelAdmin):
+    list_display = ('id', 'title', 'status', 'order', 'owner', 'createDateTime', 'image_tag')
+    list_display_links = ('id',)
+    list_editable = ('status',)
+    ordering = ('id',)
+    list_filter = ('createDateTime',)
+    search_fields = ('title',)

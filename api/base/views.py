@@ -1,6 +1,6 @@
 from rest_framework import generics
 from .serializers import PhotoListSerializer, PhotoSerializer, CreateUserSerializer,\
-    CoinSerializer, CategoryListSerializer
+    CoinSerializer, CategoryListSerializer, HelpListSerializer
 from django_filters.rest_framework import DjangoFilterBackend
 from photography.models import thumbnail
 from rest_framework import status
@@ -21,7 +21,7 @@ from django.db.models import F
 from datetime import datetime
 from .tasks import Coin_video_save, Photo_count, Coin_price_save, Update_Coin_Profile
 from log.tasks import request_photo, cashcoin, coinvideo, createuser, crash
-from app.models import version
+from app.models import version, Help_App
 from account.models import Profile
 from django.utils.crypto import get_random_string
 from coin.models import Coin_price
@@ -41,6 +41,17 @@ User = get_user_model()
 packagename = "ir.yildizlar.sheklekalamat"
 # developerpayload = "payload-string"
 Key_bazar = "MIHNMA0GCSqGSIb3DQEBAQUAA4G7ADCBtwKBrwDcyJOhI46b1Y6wjoeHbP3/tqWz9GnrLjJsTyjAXB/oZW+lSAmvEFycr3AyxWLnzZvMbI0JWemVLjqGVkZFCb/8YAKHVrRykeaAVOiJUm5jYB0Yqhwj0XUdvldBeN2clX3RoNDwBo/M8VndtZbr/+BuKnBLm4ns1LkO98oZbt1o8CI+o8x+cwNCmful5Ai0H91s4nnywGNhCLRU0+yCA0AEpmmxPY96q/EfXtUKdcECAwEAAQ=="
+
+
+class HelpListAPIView(generics.ListAPIView):
+    serializer_class = HelpListSerializer
+    def get_queryset(self):
+        cache_key = 'Help'
+        result = cache.get(cache_key, None)
+        if not result:
+            result = Help_App.objects.filter(status="1").distinct().order_by('-order')
+            cache.set(cache_key, result, timeout=CACHE_TTL)
+        return result
 
 class categoryListAPIView(generics.ListAPIView):
     serializer_class = CategoryListSerializer

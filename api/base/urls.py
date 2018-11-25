@@ -7,6 +7,7 @@ urlpatterns = [
     re_path(r'^photo/$', views.photoListAPIView.as_view(), name='photo-list'),
     re_path(r'^category/$', views.categoryListAPIView.as_view(), name='category-list'),
     re_path(r'^check/$', views.CkeckVersionAPIView.as_view(), name='ckeck-version'),
+    re_path(r'^help/$', views.HelpListAPIView.as_view(), name='help'),
     re_path(r'^bkey/$', views.KeyAPIView.as_view(), name='ckeck-version'),
     re_path(r'^coin/$', views.CkeckCoinAPIView.as_view(), name='ckeck-coin'),
     re_path(r'^cash/$', views.CashCoinAPIView.as_view(), name='cash-coin'),

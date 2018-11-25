@@ -1,6 +1,7 @@
 from rest_framework.serializers import ModelSerializer
 from rest_framework import serializers
 from photography.models import thumbnail
+from app.models import Help_App
 from django.contrib.auth import get_user_model
 User = get_user_model()
 
@@ -9,6 +10,11 @@ class CategoryListSerializer(ModelSerializer):
     class Meta:
         model = thumbnail
         fields = ('id', 'title', 'url')
+
+class HelpListSerializer(ModelSerializer):
+    class Meta:
+        model = Help_App
+        fields = ('url', )
 
 class PhotoListSerializer(ModelSerializer):
     class Meta:

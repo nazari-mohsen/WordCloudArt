@@ -63,3 +63,28 @@ class version(models.Model):
         verbose_name_plural = _('versions')
 
 
+class Help_App(models.Model):
+    owner = models.ForeignKey(settings.AUTH_USER_MODEL,
+                              verbose_name=_('owner'),
+                              help_text=_('please choose owner post'),
+                              blank=True,
+                              on_delete=models.CASCADE,
+                              null=True,
+                              default=1
+                              )
+
+    title = models.CharField(max_length=70, verbose_name=_('title'), unique=True)
+    status = models.CharField(_('status'), choices=STATUS_CHOICES, default='0', max_length=4)
+    order = models.PositiveIntegerField(_('order'), default=1)
+    url = models.FileField(_('file'), upload_to='help/', validators=[FileExtensionValidator(['jpg'])], null=False)
+    createDateTime = models.DateTimeField(_('create date'), auto_now=False, auto_now_add=True)
+
+    def image_tag(self):
+        return format_html(u'<img src="%s" width="50" height="50"/>' % (self.url.url))
+
+    def __str__(self):
+        return self.title
+
+    class Meta:
+        verbose_name = _('help')
+        verbose_name_plural = _('helps')
