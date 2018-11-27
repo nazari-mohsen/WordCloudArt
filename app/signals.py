@@ -1,7 +1,7 @@
 from django.dispatch import receiver
 from django.db.models.signals import post_save, post_delete
 from django.core.cache import cache
-from .models import Config, version
+from .models import Config, version, Help_App
 
 
 @receiver(post_save, sender=Config, dispatch_uid="Write issued")
@@ -13,3 +13,8 @@ def invalidate_cache_Config(sender, instance, **kwargs):
 @receiver(post_delete, sender=version, dispatch_uid="Write issued")
 def invalidate_cache_version(sender, instance, **kwargs):
     cache.delete('version')
+
+@receiver(post_save, sender=Help_App, dispatch_uid="Write issued")
+@receiver(post_delete, sender=Help_App, dispatch_uid="Write issued")
+def invalidate_cache_version(sender, instance, **kwargs):
+    cache.delete('Help')

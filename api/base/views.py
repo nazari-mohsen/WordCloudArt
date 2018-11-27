@@ -38,7 +38,7 @@ User = get_user_model()
 # def create_token(user):
 #     payload = jwt_payload_handler(user)
 #     return jwt_encode_handler(payload)
-packagename = "ir.yildizlar.sheklekalamat"
+packagename = "ir.yildizlar.sheklekalemeha"
 # developerpayload = "payload-string"
 Key_bazar = "MIHNMA0GCSqGSIb3DQEBAQUAA4G7ADCBtwKBrwDcyJOhI46b1Y6wjoeHbP3/tqWz9GnrLjJsTyjAXB/oZW+lSAmvEFycr3AyxWLnzZvMbI0JWemVLjqGVkZFCb/8YAKHVrRykeaAVOiJUm5jYB0Yqhwj0XUdvldBeN2clX3RoNDwBo/M8VndtZbr/+BuKnBLm4ns1LkO98oZbt1o8CI+o8x+cwNCmful5Ai0H91s4nnywGNhCLRU0+yCA0AEpmmxPY96q/EfXtUKdcECAwEAAQ=="
 
@@ -148,10 +148,10 @@ class CashCoinAPIView(APIView):
             Sku = requs['purchase']['mSku']
             PackageName = requs['purchase']['mPackageName']
             time = requs['purchase']['mPurchaseTime']
-            Payload = requs['purchase']['mDeveloperPayload']
+            # Payload = requs['purchase']['mDeveloperPayload']
             orderId = requs['purchase']['mOrderId']
             if Sku and PackageName and time and orderId:
-                if PackageName == packagename and Payload == developerpayload:
+                if PackageName == packagename: # todo: check Payload and if errorr send code 401
                     choices = {'seke1': 1000, 'seke2': 2000, 'seke3': 4000, 'seke4': 8000}
                     cash = choices.get(Sku)
                     profile = Profile.objects.filter(user=request.user).first()
