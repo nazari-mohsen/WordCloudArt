@@ -3,9 +3,7 @@ from .models import Config, version, Help_App
 import jdatetime
 from django.utils.translation import ugettext_lazy as _
 from django.utils.html import format_html
-from django.conf import settings
 
-PREFIX = getattr(settings, "PREFIX", None)
 @admin.register(Config)
 class ConfigAdmin(admin.ModelAdmin):
     list_display = ('id', 'title', 'status', 'createDateTime', 'owner', 'watermark', 'image_tag')
@@ -29,7 +27,7 @@ class VersionAdmin(admin.ModelAdmin):
             return "No attachment"
     def file_link(self, obj):
         if obj.url:
-            return format_html('<a href="%s%s" target="_blank">%s</a>' % (PREFIX, obj.url.url, PREFIX + obj.url.url))
+            return format_html('<a href="%s" target="_blank">%s</a>' % (obj.url.url, obj.url.url))
         else:
             return "No attachment"
 

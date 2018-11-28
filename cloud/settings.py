@@ -26,7 +26,7 @@ DEBUG = True
 timezone = 'Asia/Tehran'
 ALLOWED_HOSTS = ['127.0.0.1', '192.168.1.121']
 INTERNAL_IPS = ['127.0.0.1']
-PREFIX = 'http://192.168.1.121:8000'
+
 
 
 #SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
@@ -163,8 +163,10 @@ USE_TZ = True
 STATIC_URL = '/static/'
 STATIC_ROOT = 'static/'
 
-MEDIA_URL = '/media/'
-MEDIA_ROOT = 'media/'
+MEDIA_URL = 'http://cdn.kalemat.xyz/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, '../public_html/media/')
+# MEDIA_URL = '/media/'
+# MEDIA_ROOT = 'media/'
 
 
 #ckeditor settings

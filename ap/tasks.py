@@ -2,7 +2,9 @@ from celery import task
 import os
 import shutil
 from datetime import datetime
-path = 'media/user/'
+from cloud.settings import MEDIA_ROOT
+
+path = MEDIA_ROOT +'user/'
 date = datetime.now().strftime('%Y%m%d')
 
 

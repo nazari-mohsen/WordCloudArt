@@ -22,9 +22,7 @@ class Config(models.Model):
     title = models.CharField(max_length=70, verbose_name=_('title'), unique=True)
     status = models.CharField(_('status'), choices=STATUS_CHOICES, default='0', max_length=4)
     content = models.TextField(verbose_name=_('content'), null=False)
-    url_pre = models.CharField(max_length=70, verbose_name=_('url_pre'), null=False)
     watermark = models.FileField(_('watermark'), upload_to='config/', validators=[FileExtensionValidator(['png'])], null=False)
-    save_place = models.CharField(max_length=70, verbose_name=_('save_place'), null=False)
     createDateTime = models.DateTimeField(_('create date'), auto_now=False, auto_now_add=True)
     updateDateTime = models.DateTimeField(_('update date'), auto_now=True, auto_now_add=False)
 

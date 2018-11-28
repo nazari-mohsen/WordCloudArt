@@ -22,7 +22,9 @@ from django.conf import settings
 from django.core.cache import cache
 from django.utils.crypto import get_random_string
 from contextlib import suppress
+from cloud.settings import MEDIA_ROOT, MEDIA_URL
 
+result = 'result/'
 CACHE_TTL = getattr(settings, 'CACHE_TTL')
 COUNTDOWN = getattr(settings, 'COUNTDOWN')
 
@@ -63,10 +65,10 @@ def create_photo(id, content, colormap, font, word1, word2, color1, color2, main
     else:
         config = Config.objects.get(status=1)
         word_stop = config.content
-        url_pre = config.url_pre
-        save_place = config.save_place
+        # url_pre = config.url_pre
+        # save_place = config.save_place
         watermark = str(config.watermark)
-        conf = {'config': config, 'word_stop': word_stop, 'url_pre': url_pre, 'save_place': save_place, 'watermark': watermark}
+        conf = {'config': config, 'word_stop': word_stop, 'watermark': watermark}
         cache.set('conf', conf, timeout=CACHE_TTL)
     pho_conf = 'photo_conf' + str(id)
     if cache.get(pho_conf) is not None:
@@ -84,10 +86,10 @@ def create_photo(id, content, colormap, font, word1, word2, color1, color2, main
         }
         cache.set(pho_conf, photo_conf, timeout=CACHE_TTL)
 
-    image_watermark = Image.open('media/' + conf['watermark'])
-    save_path = conf['save_place'] + name
+    image_watermark = Image.open(MEDIA_ROOT + conf['watermark'])
+    save_path = MEDIA_ROOT + result + name
     word_stop = conf['word_stop']
-    url_pre = conf['url_pre']
+    # url_pre = conf['url_pre']
     min_word = photo_conf['min_word']
     medium_word = photo_conf['medium_word']
     max_word = photo_conf['max_word']
@@ -96,8 +98,8 @@ def create_photo(id, content, colormap, font, word1, word2, color1, color2, main
 
     stop_words_reshape = get_display(arabic_reshaper.reshape(word_stop))
     STOPWORDS = set([x.strip() for x in stop_words_reshape.split('\n')])
-    mask_ptoto = np.array(Image.open('media/' + path_mask))
-    main_photo = Image.open('media/' + path_photo)
+    mask_ptoto = np.array(Image.open(MEDIA_ROOT + path_mask))
+    main_photo = Image.open(MEDIA_ROOT + path_photo)
     text = get_display(arabic_reshaper.reshape(content))
     array_txt = text.split(" ")
     array_txt2 = array_txt[-10:]
@@ -134,14 +136,14 @@ def create_photo(id, content, colormap, font, word1, word2, color1, color2, main
     emoji = r"(?:[^\s])(?<![\w{ascii_printable}])".format(ascii_printable=string.printable)
     regexp = r"{normal_word}|{ascii_art}|{emoji}".format(normal_word=normal_word, ascii_art=ascii_art,
                                                          emoji=emoji)
-    Font_Path = {'a': 'B_Nazanin_Regular.ttf', 'b': 'Mj_Nazila_Gol.ttf', 'c': 'Mj_Farah_Medium.ttf',
+    Font_name = {'a': 'B_Nazanin_Regular.ttf', 'b': 'Mj_Nazila_Gol.ttf', 'c': 'Mj_Farah_Medium.ttf',
                  'd': 'B_Kaj.ttf', 'e': 'B_Moj.ttf', 'f': 'B_Majid_Shadow.ttf', 'j': 'B_Esfehan_Bold.ttf',
                  'h': 'B_Koodak_Outline.ttf', 'i': 'Mj_Fantezy.ttf', 'g': 'B_Chini.ttf', 'k': 'B_Fantezy.ttf'
                  , 'l': 'ChopinScript.otf', 'm': 'BrushScriptStd.otf', 'n': 'DirtyFox.ttf',
                  'o': 'AlexBrush-Regular.ttf', 'p': 'BlackoakStd.otf'}
 
     with suppress(FileNotFoundError):
-        Font = 'media/config/font/'+Font_Path[font]
+        Font = MEDIA_ROOT +'config/font/'+Font_name[font]
 
     recolor = 'no'
     if colormap == 'null':
@@ -171,11 +173,12 @@ def create_photo(id, content, colormap, font, word1, word2, color1, color2, main
     image = wc.to_image()
     image.paste(main_photo, (0, 0), main_photo)
     image.paste(image_watermark, (0, 0), image_watermark)
-    if not os.path.exists(conf['save_place']):
-        os.makedirs(conf['save_place'])
+    if not os.path.exists(MEDIA_ROOT + result):
+        os.makedirs(MEDIA_ROOT + result)
 
     image.save(save_path)
-    url = url_pre + name
+    url = MEDIA_URL + result + name
     save_url['url'] = url
+    print(save_url['url'])
     photo_remove.apply_async(args=[save_path, user], countdown=COUNTDOWN)
     return save_url
