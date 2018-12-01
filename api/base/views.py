@@ -141,15 +141,27 @@ class CashCoinAPIView(APIView):
     def post(self, request):
         print(request.user)
         print(request.data)
+        # mn = {'purchase': {'a': 'inapp', 'b': 'SqITeCyuefSZ41G7_', 'c': 'ir.yildizlar.sheklekalemeha', 'd': 'seke1',
+        #                    'e': 1543670438113, 'f': 0, 'g': '4xo5VNZvCYBJSQk', 'h': 'SqITeCyuefSZ41G7_',
+        #                    'i': '{"orderId": "SqITeCyuefSZ41G7_", "purchaseToken": "SqITeCyuefSZ41G7_", "developerPayload": "4xo5VNZvCYBJSQk", "packageName": "ir.yildizlar.sheklekalemeha", "purchaseState": 0, "purchaseTime": 1543670438113, "productId": "seke1"}',
+        #                    'j': 'VZ+WTFSNZhLMcavxSEc6AimLA9lYAILSdsdXsUTiKgqxnIrWCoJ+uPrZgxtYanIgFIRgJXrC98dAXV0vAYhBiK909NLJ/yrhj8d+Xy+z114QVxwsxfTx8/WTT8/SWzk09BKd7YYH9fZcjlEhLKkmUVqIRf0hqiNXb68I4mwnP8nZAq7hMybXqvyAPT+jsiGpg6Vvc9zK9X0DO23cXNzBO3/YEjJrcE8vF7K86/D2'}}
+        # print(mn['purchase']['mPackageName'])
+        # print(mn['purchase']['c'])
         cashcoin(str(request.user), request.data)
         requs = request.data
         developerpayload = cache.get(request.user, None)
         try:
-            Sku = requs['purchase']['mSku']
-            PackageName = requs['purchase']['mPackageName']
-            time = requs['purchase']['mPurchaseTime']
-            # Payload = requs['purchase']['mDeveloperPayload']
-            orderId = requs['purchase']['mOrderId']
+            #Sku = requs['purchase']['mSku']
+            #PackageName = requs['purchase']['mPackageName']
+            #time = requs['purchase']['mPurchaseTime']
+            #Payload = requs['purchase']['mDeveloperPayload']
+            #orderId = requs['purchase']['mOrderId']
+            Sku = requs['purchase']['d']
+            PackageName = requs['purchase']['c']
+            time = requs['purchase']['e']
+            #Payload = requs['purchase']['g']
+            orderId = requs['purchase']['h']
+
             if Sku and PackageName and time and orderId:
                 if PackageName == packagename: # todo: check Payload and if errorr send code 401
                     choices = {'seke1': 1000, 'seke2': 2000, 'seke3': 4000, 'seke4': 8000}
@@ -175,7 +187,7 @@ class CashCoinAPIView(APIView):
                             "coin": profile.coin
                         })
                 else:
-                    return Response({"status": "invalid data"}, status.HTTP_400_BAD_REQUEST)
+                    return Response({"status": "invalid data"}, status.HTTP_406_NOT_ACCEPTABLE)
             else:
                 return Response({"status": "not found json data"}, status.HTTP_404_NOT_FOUND)
         except:
