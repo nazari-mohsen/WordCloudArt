@@ -246,3 +246,33 @@ JWT_AUTH = {
     'JWT_AUTH_COOKIE': None,
 
 }
+
+ADMINS = (('mohsen', 'mohsen.nazari85@gmail.com'))
+
+DEVELOPERS = ['mohsen.nazari85@gmail.com', 'harfato.crash@gmail.com']
+
+SERVER_EMAIL = 'harfatozibakon@gmail.com'
+
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': False,
+    'handlers': {
+        'mail_admins': {
+            'level': 'ERROR',
+            'class': 'django.utils.log.AdminEmailHandler'
+        }
+    },
+    'loggers': {
+        'django.request': {
+            'handlers': ['mail_admins'],
+            'level': 'ERROR',
+            'propagate': True,
+        },
+    }
+}
+
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_HOST_USER = 'djangocrashreport@gmail.com'
+EMAIL_HOST_PASSWORD = 'MohsenNazari@#123'
+EMAIL_USE_TLS = True

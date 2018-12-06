@@ -60,4 +60,4 @@ class Crash(admin.ModelAdmin):
     list_filter = ('id',)
     search_fields = ('log', 'user')
     list_per_page = 20
-    readonly_fields = ('user', 'log')
+    # readonly_fields = ('user', 'log')

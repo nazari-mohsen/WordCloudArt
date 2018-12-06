@@ -8,7 +8,7 @@ from account.models import  User, Profile
 
 @admin.register(User)
 class ConfigAdmin(admin.ModelAdmin):
-   list_display = ('i', 'username', 'ar', 'are', 'ms', 'ad', 'Password_user')
+   list_display = ('id', 'i', 'username', 'ar', 'are', 'ms', 'ad', 'Password_user')
    list_display_links = ('username', )
    ordering = ('i', )
    list_filter = ('are',)
@@ -17,7 +17,7 @@ class ConfigAdmin(admin.ModelAdmin):
 
 
 @admin.register(Profile)
-class ConfigAdmin(admin.ModelAdmin):
+class ProfileAdmin(admin.ModelAdmin):
     list_display = ('user_id', 'user', 'coin', 'coin_video', 'coin_price')
     list_display_links = ('user_id', )
     ordering = ('user_id', )

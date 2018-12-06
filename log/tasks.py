@@ -1,7 +1,8 @@
 from celery import task
 from .models import Request_photo, CashCoin, Coinvideo, CreateUser, Crash
 from django.contrib.auth import get_user_model
-
+from django.core.mail import send_mail
+from cloud.settings import DEVELOPERS, SERVER_EMAIL
 User = get_user_model()
 
 @task
@@ -50,3 +51,15 @@ def crash(log, user):
     crash.user = user
     crash.log = log
     crash.save()
+
+@task
+def send_email_device_crash(message):
+    MAILER_LIST = DEVELOPERS
+    send_mail(
+        'Crash Device of Harfato',
+        message,
+        SERVER_EMAIL,
+        MAILER_LIST,
+        fail_silently=False,
+    )
+    return MAILER_LIST
