@@ -255,7 +255,7 @@ def CreateUserAPIView(request):
         app_ver_code = serializer.data.get('are')
         im_id_mac = serializer.data.get('iam')
         imei = serializer.data.get('i')
-        user = User.objects.filter(i=imei).first()
+        user = User.objects.filter(i=imei, ad=android_id).first()
         if not user:
             user = User.objects.create_user(username=username, ad=android_id, i=imei,
                                         password=password, Password_user=password,
