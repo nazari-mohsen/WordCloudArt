@@ -77,6 +77,18 @@ class photoListAPIView(generics.ListAPIView):
             cache.set(cache_key, result, timeout=CACHE_TTL)
         return result
 
+class photoListDevelopAPIView(generics.ListAPIView):
+    serializer_class = PhotoListSerializer
+    filter_backends = (DjangoFilterBackend,)
+    filter_fields = ('category',)
+    def get_queryset(self):
+        cache_key = 'photodevelop'
+        result = cache.get(cache_key, None)
+        if not result:
+            result = thumbnail.objects.filter(status="0").distinct().order_by('-order')
+            cache.set(cache_key, result, timeout=CACHE_TTL)
+        return result
+
 class CkeckVersionAPIView(APIView):
     def get(self, request):
         cache_key = 'version'

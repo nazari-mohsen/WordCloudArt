@@ -7,5 +7,5 @@ from .models import Crash
 @receiver(post_delete, sender=Crash)
 def post_save_device_crash(sender, instance, created, **kwargs):
     if created:
-        message = instance.log
+        message = str(instance.log)
         send_email_device_crash.delay(message)
