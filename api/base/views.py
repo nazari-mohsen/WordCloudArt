@@ -231,7 +231,7 @@ def PhotoAPIView(request):
                     cache_key = 'photo_main' + str(id)
                     photo_main = cache.get(cache_key, None)
                     if not photo_main:
-                        photo_main = thumbnail.objects.filter(id=id, status=1).first()
+                        photo_main = thumbnail.objects.filter(id=id).first()
                     if photo_main is not None and result.coin >= photo_main.cash:
                         cache.set(cache_key, photo_main, timeout=CACHE_TTL)
                         url_image = create_photo(id, content, colormap, font, word1, word2, color1, color2, main_color, bg_color, usern)
