@@ -8,3 +8,4 @@ from .models import Category
 @receiver(post_delete, sender=Category, dispatch_uid="Write issued")
 def invalidate_cache_Config(sender, instance, **kwargs):
     cache.delete('category')
+    cache.delete('categorydevelop')

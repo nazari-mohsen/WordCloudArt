@@ -27,8 +27,8 @@ from django.utils.crypto import get_random_string
 from coin.models import Coin_price
 import uuid
 
-cash_coin_video = 15
-cash_coin = 100
+cash_coin_video = 200
+cash_coin = 1001
 PREFIX = getattr(settings, "PREFIX", None)
 CACHE_TTL = getattr(settings, 'CACHE_TTL', DEFAULT_TIMEOUT)
 # jwt_payload_handler = api_settings.JWT_PAYLOAD_HANDLER
@@ -74,6 +74,18 @@ class photoListAPIView(generics.ListAPIView):
         result = cache.get(cache_key, None)
         if not result:
             result = thumbnail.objects.filter(status="1").distinct().order_by('-order')
+            cache.set(cache_key, result, timeout=CACHE_TTL)
+        return result
+
+class categoryListDevelopAPIView(generics.ListAPIView):
+    serializer_class = CategoryListSerializer
+    filter_backends = (DjangoFilterBackend,)
+    filter_fields = ('id',)
+    def get_queryset(self):
+        cache_key = 'categorydevelop'
+        result = cache.get(cache_key, None)
+        if not result:
+            result = Category.objects.all().distinct().order_by('-order')
             cache.set(cache_key, result, timeout=CACHE_TTL)
         return result
 
@@ -231,7 +243,7 @@ def PhotoAPIView(request):
                     cache_key = 'photo_main' + str(id)
                     photo_main = cache.get(cache_key, None)
                     if not photo_main:
-                        photo_main = thumbnail.objects.filter(id=id, status=1).first()
+                        photo_main = thumbnail.objects.filter(id=id).first()
                     if photo_main is not None and result.coin >= photo_main.cash:
                         cache.set(cache_key, photo_main, timeout=CACHE_TTL)
                         url_image = create_photo(id, content, colormap, font, word1, word2, color1, color2, main_color, bg_color, usern)
@@ -246,7 +258,7 @@ def PhotoAPIView(request):
                         return Response({"ERROR": "User Not Enough Coin"}, status=status.HTTP_400_BAD_REQUEST)
             return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
         return Response({"ERROR": "User Not Coin"}, status=status.HTTP_400_BAD_REQUEST)
-    return Response({"ERROR": "User Not Found Coin"}, status=status.HTTP_400_BAD_REQUEST)
+    return Response({"ERROR": "User Not Found"}, status=status.HTTP_400_BAD_REQUEST)
 
 @api_view(['POST'])
 @permission_classes((AllowAny, ))
