@@ -165,12 +165,6 @@ class CashCoinAPIView(APIView):
     def post(self, request):
         print(request.user)
         print(request.data)
-        # mn = {'purchase': {'a': 'inapp', 'b': 'SqITeCyuefSZ41G7_', 'c': 'ir.yildizlar.sheklekalemeha', 'd': 'seke1',
-        #                    'e': 1543670438113, 'f': 0, 'g': '4xo5VNZvCYBJSQk', 'h': 'SqITeCyuefSZ41G7_',
-        #                    'i': '{"orderId": "SqITeCyuefSZ41G7_", "purchaseToken": "SqITeCyuefSZ41G7_", "developerPayload": "4xo5VNZvCYBJSQk", "packageName": "ir.yildizlar.sheklekalemeha", "purchaseState": 0, "purchaseTime": 1543670438113, "productId": "seke1"}',
-        #                    'j': 'VZ+WTFSNZhLMcavxSEc6AimLA9lYAILSdsdXsUTiKgqxnIrWCoJ+uPrZgxtYanIgFIRgJXrC98dAXV0vAYhBiK909NLJ/yrhj8d+Xy+z114QVxwsxfTx8/WTT8/SWzk09BKd7YYH9fZcjlEhLKkmUVqIRf0hqiNXb68I4mwnP8nZAq7hMybXqvyAPT+jsiGpg6Vvc9zK9X0DO23cXNzBO3/YEjJrcE8vF7K86/D2'}}
-        # print(mn['purchase']['mPackageName'])
-        # print(mn['purchase']['c'])
         cashcoin(str(request.user), request.data)
         requs = request.data
         developerpayload = cache.get(request.user, None)
@@ -185,9 +179,8 @@ class CashCoinAPIView(APIView):
             time = requs['purchase']['e']
             #Payload = requs['purchase']['g']
             orderId = requs['purchase']['h']
-
             if Sku and PackageName and time and orderId:
-                if PackageName == packagename: # todo: check Payload and if errorr send code 401
+                if PackageName == packagename:
                     choices = {'seke1': 1000, 'seke2': 2000, 'seke3': 4000, 'seke4': 8000}
                     cash = choices.get(Sku)
                     profile = Profile.objects.filter(user=request.user).first()
@@ -258,7 +251,7 @@ def PhotoAPIView(request):
                         return Response({"ERROR": "User Not Enough Coin"}, status=status.HTTP_400_BAD_REQUEST)
             return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
         return Response({"ERROR": "User Not Coin"}, status=status.HTTP_400_BAD_REQUEST)
-    return Response({"ERROR": "User Not Found"}, status=status.HTTP_400_BAD_REQUEST)
+    return Response({"ERROR": "User Not Found Coin"}, status=status.HTTP_400_BAD_REQUEST)
 
 @api_view(['POST'])
 @permission_classes((AllowAny, ))
@@ -279,12 +272,13 @@ def CreateUserAPIView(request):
         app_ver_code = serializer.data.get('are')
         im_id_mac = serializer.data.get('iam')
         imei = serializer.data.get('i')
+        adnroid_brand = serializer.data.get('br')
         user = User.objects.filter(i=imei, ad=android_id).first()
         if not user:
             user = User.objects.create_user(username=username, ad=android_id, i=imei,
                                         password=password, Password_user=password,
                                             ar=android_ver, are=app_ver_code,
-                                            ms=mac_address, iam=im_id_mac)
+                                            ms=mac_address, iam=im_id_mac, br=adnroid_brand)
 
             user.save()
             instance = User.objects.filter(username=username).first()
@@ -296,6 +290,9 @@ def CreateUserAPIView(request):
             Coin_video_save.delay(datetime.now(), str(request.user), cash_coin)
             return Response({"ps": password, "ur": username})
         else:
+            user.are = app_ver_code
+            user.br = adnroid_brand
+            user.save()
             ps = user.Password_user
             ur = user.username
             return Response({"ps": ps, "ur": ur})

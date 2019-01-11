@@ -14,6 +14,7 @@ class User(AbstractUser):
     are = models.CharField(_('Application version'), max_length=2, default="1")
     ms = models.CharField(_('MAC Address'), max_length=50, null=True)
     ad = models.CharField(_('android_id'), max_length=50, null=True)
+    br = models.CharField(_('android_brand'), max_length=50, null=True)
     iam = models.CharField(_('im_id_mac'), max_length=200)
     # coin = models.IntegerField(_('Coin_sum'), default=0, unique=False)
     Password_user = models.CharField(_('Password'), max_length=20, default="123456789")

@@ -14,7 +14,7 @@ class request_photo(admin.ModelAdmin):
     readonly_fields = ('user', 'log')
 
 @admin.register(Photo_log)
-class Admin_log(admin.ModelAdmin):
+class Photo_log(admin.ModelAdmin):
     list_display = ('id', 'user', 'Photo', 'createDateTime')
     list_display_links = ('id',)
     ordering = ('id',)
@@ -34,13 +34,17 @@ class cashcoin(admin.ModelAdmin):
 
 @admin.register(Coinvideo)
 class coinvideo(admin.ModelAdmin):
-    list_display = ('id', 'user', 'createDateTime')
+    list_display = ('id', 'user', 'createDateTime', 'all_video')
     list_display_links = ('id', )
     ordering = ('id', )
     list_filter = ('user',)
     search_fields = ('user', 'log')
     list_per_page = 20
     readonly_fields = ('user', 'log')
+    def all_video(self, obj):
+        # p = Coin_video.objects.filter(~Q(coin_video=201), ~Q(coin_video=1001)).count()
+        p = Coinvideo.objects.all().count()
+        return p
 
 @admin.register(CreateUser)
 class createuser(admin.ModelAdmin):
@@ -60,4 +64,4 @@ class Crash(admin.ModelAdmin):
     list_filter = ('id',)
     search_fields = ('log', 'user')
     list_per_page = 20
-    # readonly_fields = ('user', 'log')
+    #readonly_fields = ('user', 'log')

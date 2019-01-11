@@ -163,7 +163,7 @@ USE_TZ = True
 STATIC_URL = '/static/'
 STATIC_ROOT = 'static/'
 
-MEDIA_URL = 'http://192.168.1.121:8000/media/'
+MEDIA_URL = 'http://192.168.1.121:8080/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, '../public_html/media/')
 # MEDIA_URL = '/media/'
 # MEDIA_ROOT = 'media/'

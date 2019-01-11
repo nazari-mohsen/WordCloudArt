@@ -8,16 +8,16 @@ from account.models import  User, Profile
 
 @admin.register(User)
 class ConfigAdmin(admin.ModelAdmin):
-   list_display = ('id', 'i', 'username', 'ar', 'are', 'ms', 'ad', 'Password_user')
+   list_display = ('id', 'i', 'username', 'ar', 'are', 'br', 'ad', 'Password_user')
    list_display_links = ('username', )
    ordering = ('i', )
-   list_filter = ('are',)
+   list_filter = ('are', 'br', 'ar')
    search_fields = ('i', )
    list_per_page = 20
 
 
 @admin.register(Profile)
-class ProfileAdmin(admin.ModelAdmin):
+class ConfigAdmin(admin.ModelAdmin):
     list_display = ('user_id', 'user', 'coin', 'coin_video', 'coin_price')
     list_display_links = ('user_id', )
     ordering = ('user_id', )

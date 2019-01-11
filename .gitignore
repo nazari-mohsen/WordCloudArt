@@ -3,3 +3,4 @@ media/
 */__pycache__
 api/base/__pycache__
 ap/__pycache__
+backup/
