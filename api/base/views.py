@@ -1,6 +1,6 @@
 from rest_framework import generics
 from .serializers import PhotoListSerializer, PhotoSerializer, CreateUserSerializer,\
-    CoinSerializer, CategoryListSerializer, HelpListSerializer
+    CoinSerializer, CategoryListSerializer, HelpListSerializer, Photo_v2Serializer
 from django_filters.rest_framework import DjangoFilterBackend
 from photography.models import thumbnail
 from rest_framework import status
@@ -64,6 +64,12 @@ class categoryListAPIView(generics.ListAPIView):
             result = Category.objects.filter(status="1").distinct().order_by('-order')
             cache.set(cache_key, result, timeout=CACHE_TTL)
         return result
+
+class ColorListAPIView(APIView):
+    def get(self, request):
+        color = {"a": "FA8072", "b": "DA70D6", "c": "98FB98", "d": "FFFFE0"}
+        return Response(color)
+
 
 class photoListAPIView(generics.ListAPIView):
     serializer_class = PhotoListSerializer
@@ -221,6 +227,50 @@ def PhotoAPIView(request):
         result = Profile.objects.filter(user_id=user.id).first()
         if result:
             serializer = PhotoSerializer(data=request.data)
+            if serializer.is_valid():
+                id = serializer.data.get('id')
+                content = serializer.data.get('content')
+                colormap = serializer.data.get('cm')
+                font = serializer.data.get('f')
+                word1 = serializer.data.get('word1')
+                word2 = serializer.data.get('word2')
+                color1 = serializer.data.get('color1')
+                color2 = serializer.data.get('color2')
+                main_color = serializer.data.get('main_color')
+                bg_color = serializer.data.get('bg_color')
+                if id and content:
+                    cache_key = 'photo_main' + str(id)
+                    photo_main = cache.get(cache_key, None)
+                    if not photo_main:
+                        photo_main = thumbnail.objects.filter(id=id).first()
+                    if photo_main is not None and result.coin >= photo_main.cash:
+                        cache.set(cache_key, photo_main, timeout=CACHE_TTL)
+                        url_image = create_photo(id, content, colormap, font, word1, word2, color1, color2, main_color, bg_color, usern)
+                        Photo_count.delay(datetime.now(), usern, id)
+                        Profile.objects.filter(user=request.user).update(coin=F('coin') - photo_main.cash)
+                        Update_Coin_Profile.delay(usern, int(photo_main.cash))
+                        res = url_image
+                        profile = Profile.objects.get(user=request.user)
+                        res["coin"] = profile.coin
+                        return Response(res, status=status.HTTP_200_OK)
+                    else:
+                        return Response({"ERROR": "User Not Enough Coin"}, status=status.HTTP_400_BAD_REQUEST)
+            return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+        return Response({"ERROR": "User Not Coin"}, status=status.HTTP_400_BAD_REQUEST)
+    return Response({"ERROR": "User Not Found Coin"}, status=status.HTTP_400_BAD_REQUEST)
+
+
+@api_view(['POST'])
+def Photo_v2APIView(request):
+    print(request.data)
+    print(request.user)
+    usern = str(request.user)
+    request_photo(usern, request.data)
+    user = User.objects.filter(username=request.user).first()
+    if user:
+        result = Profile.objects.filter(user_id=user.id).first()
+        if result:
+            serializer = Photo_v2Serializer(data=request.data)
             if serializer.is_valid():
                 id = serializer.data.get('id')
                 content = serializer.data.get('content')

@@ -6,6 +6,7 @@ urlpatterns = [
 
     re_path(r'^photo/$', views.photoListAPIView.as_view(), name='photo-list'),
     re_path(r'^devphotolab/$', views.photoListDevelopAPIView.as_view(), name='photo-develop'),
+    re_path(r'^color/$', views.ColorListAPIView.as_view(), name='color'),
     re_path(r'^category/$', views.categoryListAPIView.as_view(), name='category-list'),
     re_path(r'^devcategorylab/$', views.categoryListDevelopAPIView.as_view(), name='category-Develop'),
     re_path(r'^check/$', views.CkeckVersionAPIView.as_view(), name='ckeck-version'),
@@ -15,6 +16,7 @@ urlpatterns = [
     re_path(r'^cash/$', views.CashCoinAPIView.as_view(), name='cash-coin'),
     re_path(r'^crash/$', views.CrashAPIView.as_view(), name='crash'),
     re_path(r'^crphoto/$', views.PhotoAPIView, name='create_photo'),
+    re_path(r'^crphotov/$', views.Photo_v2APIView, name='create_photov2'),
 
     re_path(r'^user/create/$', views.CreateUserAPIView, name='create_user'),
     re_path(r'^tokencreate/', obtain_jwt_token),
