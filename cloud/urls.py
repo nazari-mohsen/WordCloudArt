@@ -19,7 +19,7 @@ from django.conf.urls.static import static
 from django.conf import settings
 from django.urls import re_path
 urlpatterns = [
-    re_path(r'^kalmn/', admin.site.urls),
+    re_path(r'^admin/', admin.site.urls),
     re_path(r'^ckeditor/', include('ckeditor_uploader.urls')),
     re_path(r'^api/v1/', include('api.base.urls')),
 

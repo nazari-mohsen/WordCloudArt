@@ -114,13 +114,13 @@ def create_photo(id, content, colormap, font, word1, word2, color1, color2, main
 
     words = multidict.MultiDict()
     color_to_words = {}
-    if word1 != None:
+    if word1 is not None:
         w1 = get_display(arabic_reshaper.reshape(word1))
         sword1 = w1.split(" ")
         words.add(sword1[0], ln_word)
         color_to_words[color1] = [w1]
 
-    if word2 != None:
+    if word2 is not None:
         w2 = get_display(arabic_reshaper.reshape(word2))
         sword2 = w2.split(" ")
         words.add(sword2[0], ln_word)
@@ -137,13 +137,13 @@ def create_photo(id, content, colormap, font, word1, word2, color1, color2, main
     regexp = r"{normal_word}|{ascii_art}|{emoji}".format(normal_word=normal_word, ascii_art=ascii_art,
                                                          emoji=emoji)
     Font_name = {'a': 'B_Nazanin_Regular.ttf', 'b': 'Mj_Nazila_Gol.ttf', 'c': 'Mj_Farah_Medium.ttf',
-                 'd': 'B_Kaj.ttf', 'e': 'B_Moj.ttf', 'f': 'B_Majid_Shadow.ttf', 'j': 'B_Esfehan_Bold.ttf',
+                 'd': 'B_Kaj.ttf', 'e': 'B_Moj.ttf', 'f': 'B_Majid_Shadow.ttf', 'j': 'B_Esfehan_Bold.ttf' ,
                  'h': 'B_Koodak_Outline.ttf', 'i': 'Mj_Fantezy.ttf', 'g': 'B_Chini.ttf', 'k': 'B_Fantezy.ttf'
                  , 'l': 'ChopinScript.otf', 'm': 'BrushScriptStd.otf', 'n': 'DirtyFox.ttf',
                  'o': 'AlexBrush-Regular.ttf', 'p': 'BlackoakStd.otf'}
 
     with suppress(FileNotFoundError):
-        Font = MEDIA_ROOT +'config/font/'+Font_name[font]
+        Font = MEDIA_ROOT + 'config/font/' + Font_name[font]
 
     recolor = 'no'
     if colormap == 'null':

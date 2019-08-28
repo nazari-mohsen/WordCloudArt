@@ -51,7 +51,7 @@ class Photo_v2Serializer(serializers.Serializer):
 class CreateUserSerializer(ModelSerializer):
     class Meta:
         model = User
-        fields = ('are', 'i', 'ar', 'ms', 'ad', 'br', 'iam')
+        fields = ('are', 'i', 'ar', 'ms', 'ad', 'br', 'iam', 'mr')
 
 class CoinSerializer(serializers.Serializer):
     imei = serializers.IntegerField(required=False, allow_null=False)

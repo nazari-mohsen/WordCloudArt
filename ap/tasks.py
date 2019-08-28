@@ -4,7 +4,7 @@ import shutil
 from datetime import datetime
 from cloud.settings import MEDIA_ROOT
 
-path = MEDIA_ROOT +'user/'
+path = MEDIA_ROOT + 'user/'
 date = datetime.now().strftime('%Y%m%d')
 
 

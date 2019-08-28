@@ -1,0 +1,15 @@
+[uwsgi]
+chdir = ${APP_HOME}/app
+module = ${UWSGI_MODULE}
+http = 0.0.0.0:${UWSGI_HTTP}
+workers = ${UWSGI_WORKERS}
+threads = ${UWSGI_THREADS}
+master = true
+vacuum = true
+max-requests = ${UWSGI_MAX_REQUESTS}
+harakiri = ${UWSGI_HARAKIRI}
+post-buffering = true
+buffer-size = ${UWSGI_BUFFER_SIZE}
+reload-on-rss = ${UWSGI_RELOAD_ON_RSS}
+die-on-term = true
+memory-report = true

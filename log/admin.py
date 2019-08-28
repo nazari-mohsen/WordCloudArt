@@ -8,7 +8,7 @@ class request_photo(admin.ModelAdmin):
     list_display = ('id', 'user', 'createDateTime')
     list_display_links = ('id', )
     ordering = ('id', )
-    list_filter = ('user',)
+    list_filter = ('createDateTime',)
     search_fields = ('user', 'log')
     list_per_page = 20
     readonly_fields = ('user', 'log')
@@ -18,7 +18,7 @@ class Photo_log(admin.ModelAdmin):
     list_display = ('id', 'user', 'Photo', 'createDateTime')
     list_display_links = ('id',)
     ordering = ('id',)
-    list_filter = ('createDateTime', 'Photo')
+    list_filter = ('createDateTime',)
     search_fields = ('Photo', 'user')
     list_per_page = 50
 
@@ -27,7 +27,7 @@ class cashcoin(admin.ModelAdmin):
     list_display = ('id', 'user', 'createDateTime')
     list_display_links = ('id', )
     ordering = ('id', )
-    list_filter = ('user',)
+    list_filter = ('createDateTime',)
     search_fields = ('user', 'log')
     list_per_page = 20
     readonly_fields = ('user', 'log')
@@ -37,7 +37,7 @@ class coinvideo(admin.ModelAdmin):
     list_display = ('id', 'user', 'createDateTime', 'all_video')
     list_display_links = ('id', )
     ordering = ('id', )
-    list_filter = ('user',)
+    list_filter = ('createDateTime',)
     search_fields = ('user', 'log')
     list_per_page = 20
     readonly_fields = ('user', 'log')
@@ -51,7 +51,7 @@ class createuser(admin.ModelAdmin):
     list_display = ('id', 'createDateTime')
     list_display_links = ('id', )
     ordering = ('id', )
-    list_filter = ('id',)
+    list_filter = ('createDateTime',)
     search_fields = ('log',)
     list_per_page = 20
     readonly_fields = ('log',)
@@ -61,7 +61,7 @@ class Crash(admin.ModelAdmin):
     list_display = ('id', 'user', 'createDateTime')
     list_display_links = ('id', )
     ordering = ('id', )
-    list_filter = ('id',)
+    list_filter = ('createDateTime',)
     search_fields = ('log', 'user')
     list_per_page = 20
     #readonly_fields = ('user', 'log')

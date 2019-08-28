@@ -1,0 +1,13 @@
+.vscode
+.idea
+chart
+.gitignore
+Dockerfile*
+Makefile
+tox.ini
+.env*
+static
+.dockerignore
+.git*
+media
+public

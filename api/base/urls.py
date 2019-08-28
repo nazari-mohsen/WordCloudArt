@@ -1,7 +1,9 @@
-from django.conf.urls import url
+# from django.conf.urls import url
 from rest_framework_jwt.views import obtain_jwt_token, refresh_jwt_token, verify_jwt_token
+from rest_framework_swagger.views import get_swagger_view
 from . import views
 from django.urls import re_path
+schema_view = get_swagger_view(title='Wordcloud APIS')
 urlpatterns = [
 
     re_path(r'^photo/$', views.photoListAPIView.as_view(), name='photo-list'),
@@ -17,6 +19,7 @@ urlpatterns = [
     re_path(r'^crash/$', views.CrashAPIView.as_view(), name='crash'),
     re_path(r'^crphoto/$', views.PhotoAPIView, name='create_photo'),
     re_path(r'^crphotov/$', views.Photo_v2APIView, name='create_photov2'),
+    re_path(r'^docs/', schema_view),
 
     re_path(r'^user/create/$', views.CreateUserAPIView, name='create_user'),
     re_path(r'^tokencreate/', obtain_jwt_token),

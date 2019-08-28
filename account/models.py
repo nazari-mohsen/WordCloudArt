@@ -1,10 +1,14 @@
-import uuid
+# import uuid
 from django.contrib.auth.models import AbstractUser
 from django.db import models
 from django.utils.translation import gettext_lazy as _
 from cloud import settings
 
-
+MARKET_CHOICES = (
+    ('0', _('Bazaar')),
+    ('1', _('Myket')),
+    ('2', _('NoMarket'))
+)
 
 class User(AbstractUser):
     # user_key = models.CharField(_('User Key'), max_length=42, default=uuid.uuid4, unique=True)
@@ -15,6 +19,7 @@ class User(AbstractUser):
     ms = models.CharField(_('MAC Address'), max_length=50, null=True)
     ad = models.CharField(_('android_id'), max_length=50, null=True)
     br = models.CharField(_('android_brand'), max_length=50, null=True)
+    mr = models.CharField(_('Market'), choices=MARKET_CHOICES, max_length=2, null=True)
     iam = models.CharField(_('im_id_mac'), max_length=200)
     # coin = models.IntegerField(_('Coin_sum'), default=0, unique=False)
     Password_user = models.CharField(_('Password'), max_length=20, default="123456789")
@@ -47,4 +52,3 @@ class Profile(models.Model):
         ordering = ['-coin']
         verbose_name = _('Profile')
         verbose_name_plural = _('Profile')
-

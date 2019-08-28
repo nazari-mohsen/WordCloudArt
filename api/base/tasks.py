@@ -1,7 +1,7 @@
 from celery import task
 from coin.models import Coin_video, Coin_price
 from account.models import Profile
-from log.models import Request_photo, CashCoin, Coinvideo, CreateUser
+# from log.models import Request_photo, CashCoin, Coinvideo, CreateUser
 from photography.models import thumbnail
 from log.models import Photo_log
 from django.contrib.auth import get_user_model

@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 from rest_framework import generics
 from .serializers import PhotoListSerializer, PhotoSerializer, CreateUserSerializer,\
     CoinSerializer, CategoryListSerializer, HelpListSerializer, Photo_v2Serializer
@@ -27,8 +28,8 @@ from django.utils.crypto import get_random_string
 from coin.models import Coin_price
 import uuid
 
-cash_coin_video = 200
-cash_coin = 1001
+cash_coin_video = 100
+cash_coin = 100
 PREFIX = getattr(settings, "PREFIX", None)
 CACHE_TTL = getattr(settings, 'CACHE_TTL', DEFAULT_TIMEOUT)
 # jwt_payload_handler = api_settings.JWT_PAYLOAD_HANDLER
@@ -262,8 +263,8 @@ def PhotoAPIView(request):
 
 @api_view(['POST'])
 def Photo_v2APIView(request):
-    print(request.data)
-    print(request.user)
+    # print(request.data)
+    # print(request.user)
     usern = str(request.user)
     request_photo(usern, request.data)
     user = User.objects.filter(username=request.user).first()
@@ -323,12 +324,13 @@ def CreateUserAPIView(request):
         im_id_mac = serializer.data.get('iam')
         imei = serializer.data.get('i')
         adnroid_brand = serializer.data.get('br')
+        market = serializer.data.get('mr')
         user = User.objects.filter(i=imei, ad=android_id).first()
         if not user:
             user = User.objects.create_user(username=username, ad=android_id, i=imei,
                                         password=password, Password_user=password,
                                             ar=android_ver, are=app_ver_code,
-                                            ms=mac_address, iam=im_id_mac, br=adnroid_brand)
+                                            ms=mac_address, iam=im_id_mac, br=adnroid_brand, mr=market)
 
             user.save()
             instance = User.objects.filter(username=username).first()
@@ -342,6 +344,7 @@ def CreateUserAPIView(request):
         else:
             user.are = app_ver_code
             user.br = adnroid_brand
+            user.mr = market
             user.save()
             ps = user.Password_user
             ur = user.username
