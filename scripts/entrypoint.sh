@@ -74,12 +74,9 @@ if [ "$1" = "python" ] && [ "$2" = "manage.py" ]; then
         init_django
         exec "$@"
     fi
-elif [ "$1" = "bash" ] || [ "$1" = "sh" ]; then
-    exec "$@"
-
-elif [ "$1" = "celery" ] ; then
+elif [ "$1" = "uwsgi" ] ; then
+    init_django
     exec "$@"
 else
-    init_django
-    exec uwsgi "$@"
+    exec "$@"
 fi

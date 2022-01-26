@@ -100,4 +100,4 @@ EXPOSE ${UWSGI_HTTP}
 
 ENTRYPOINT ["scripts/entrypoint.sh"]
 
-CMD ["--ini", "scripts/uwsgi.ini"]
+CMD ["uwsgi", "--ini", "scripts/uwsgi.ini"]
