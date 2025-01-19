@@ -121,4 +121,4 @@ For any issues or questions, please visit the [Issues](https://github.com/nazari
 
 ## License
 
-This project is licensed under the MIT License. See the LICENSE file for more details.
+This project is licensed under the Apache License. See the LICENSE file for more details.
